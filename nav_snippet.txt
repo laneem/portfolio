@@ -1,0 +1,7 @@
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">KM</a>
+  <div class="nav-right">
+    <ul class="nav-links"><li><a href="work.html">My Projects</a></li><li><a href="about.html">About Me</a></li><li><a href="writing.html">Writing</a></li></ul>
+    <a href="index.html#contact" class="nav-catchup">Let's Catchup</a>
+  </div>
+</nav>

@@ -1,162 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — Karpaga Meenal</title>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me — Karpaga Meenal</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<div class="cursor" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div>
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">KM</a>
+  <div class="nav-right">
+    <ul class="nav-links"><li><a href="work.html">My Projects</a></li><li><a href="about.html" class="active">About Me</a></li><li><a href="writing.html">Writing</a></li></ul>
+    <a href="index.html#contact" class="nav-catchup">Let's Catchup</a>
+  </div>
+</nav>
+<div class="about-page-inner">
+  <div class="reveal">
+    <div class="about-page-photo">
+      <img src="images/photo-main.jpg" alt="Karpaga Meenal" />
+    </div>
+  </div>
+  <div class="about-page-right">
+    <div class="sec-label reveal">About Me</div>
+    <h1 class="page-title reveal">The person behind <em>the work</em></h1>
+    <p class="about-body reveal">I'm a Senior UX Designer with 7+ years of experience turning complex enterprise systems into intuitive, human-centred products — across banking, logistics, healthcare, and telecom. From field portals for frontline workers to platforms serving millions, I care deeply about making things that quietly work.</p>
+    <p class="about-body reveal">I believe great design starts with deeply understanding people — their context, their frustrations, and the systems they navigate daily. That's what drives my research-first approach.</p>
+    <p class="about-body reveal" style="font-style:italic; color:var(--accent);">"Design is not just how it looks, it's how it works — for every human, in every context."</p>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-
-  <nav id="mainNav">
-    <a href="index.html" class="nav-logo">KM</a>
-    <ul class="nav-links">
-      <li><a href="work.html">Work</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="writing.html">Writing</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- About Hero -->
-  <div class="about-hero">
-    <div>
-      <div class="section-label reveal">About Me</div>
-      <h1 class="about-title reveal">The person<br/>behind <em>the work</em></h1>
-      <p class="about-body reveal">I'm a Senior UX Designer with 7+ years of hands-on experience across banking, logistics, healthcare, and telecom. I turn complex systems into intuitive, human-centred products — from field portals for billion-dollar enterprises to design systems used by platforms serving millions.</p>
-      <p class="about-body reveal">My personal is rooted in research — I believe before I design. I've run discovery sprints, designed for billion-dollar enterprises, and built design-sensitive teams. A good UI is invisible. It just goes all the way to wherever people want to go.</p>
-      <p class="about-body reveal" style="font-style:italic; color:var(--accent);">"Design is not just how it looks, it's how it works — for every human, in every context."</p>
-
-      <div class="about-skills reveal">
-        <span class="tag">User Research</span>
-        <span class="tag">Interaction Design</span>
-        <span class="tag">Information Architecture</span>
-        <span class="tag">Figma</span>
-        <span class="tag">Design Systems</span>
-        <span class="tag">Stakeholder Communication</span>
-        <span class="tag">Usability Testing</span>
-        <span class="tag">B2B SaaS</span>
-        <span class="tag">Accessibility Design</span>
-      </div>
-
-      <div class="stats-bar reveal" style="padding:2rem 0; border:none; border-top:1px solid var(--border); gap:2rem; justify-content:flex-start; flex-wrap:wrap;">
-        <div class="stat" style="text-align:left;">
-          <div class="stat-number">7<span>+</span></div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat" style="text-align:left;">
-          <div class="stat-number">50<span>M+</span></div>
-          <div class="stat-label">Users Impacted</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat" style="text-align:left;">
-          <div class="stat-number">8</div>
-          <div class="stat-label">Industries</div>
-        </div>
-      </div>
+    <div class="skills-wrap reveal">
+      <span class="skill-tag">User Research</span>
+      <span class="skill-tag">Interaction Design</span>
+      <span class="skill-tag">Information Architecture</span>
+      <span class="skill-tag">Figma</span>
+      <span class="skill-tag">Design Systems</span>
+      <span class="skill-tag">Stakeholder Communication</span>
+      <span class="skill-tag">Usability Testing</span>
+      <span class="skill-tag">B2B SaaS</span>
+      <span class="skill-tag">Accessibility Design</span>
     </div>
 
-    <!-- Photo area -->
-    <div class="about-photo-grid reveal">
-      <div class="photo-main">
-        <img src="images/photo-main.jpg" alt="Karpaga Meenal" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:var(--text-muted);font-size:0.85rem;\'>Add your photo here<br/>images/photo-main.jpg</span>'" />
+    <div style="display:flex; gap:2rem; padding:1.5rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); margin:1.5rem 0;" class="reveal">
+      <div class="stat" style="text-align:left;"><div style="font-family:var(--serif);font-size:2rem;line-height:1;">7<span style="color:var(--accent);">+</span></div><div style="font-size:.72rem;color:var(--muted);">Years Experience</div></div>
+      <div style="width:1px;background:var(--border);"></div>
+      <div class="stat" style="text-align:left;"><div style="font-family:var(--serif);font-size:2rem;line-height:1;">50<span style="color:var(--accent);">M+</span></div><div style="font-size:.72rem;color:var(--muted);">Users Impacted</div></div>
+      <div style="width:1px;background:var(--border);"></div>
+      <div class="stat" style="text-align:left;"><div style="font-family:var(--serif);font-size:2rem;line-height:1;">8</div><div style="font-size:.72rem;color:var(--muted);">Industries</div></div>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:1.3rem;font-weight:400;margin-bottom:1rem;" class="reveal">When I'm not designing…</h3>
+    <div class="about-interests reveal">
+      <div class="interest-card"><div class="ico">📚</div><h4>Lost in a novel</h4><p>I read a lot — mostly fiction. Simple stories, complex characters. It's where I rest.</p></div>
+      <div class="interest-card"><div class="ico">✍️</div><h4>Trying to write</h4><p>I try to write now and then. Thoughts, fragments, beginnings. Nothing finished yet.</p></div>
+      <div class="interest-card"><div class="ico">🎨</div><h4>Drawing & painting</h4><p>Sometimes I draw, sometimes I paint. Not often enough, but it keeps me slow.</p></div>
+      <div class="interest-card"><div class="ico">☕</div><h4>Big-time chai lover</h4><p>Genuine chai addict. And an even bigger fan of good conversations with new people.</p></div>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:1.3rem;font-weight:400;margin:2rem 0 1.25rem;" class="reveal">Kind words from collaborators</h3>
+    <div style="display:flex;flex-direction:column;gap:1rem;" class="reveal">
+      <div style="background:var(--bg2);border-radius:14px;padding:1.5rem;position:relative;">
+        <p style="font-size:.87rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem;">"Meenal made a strong contribution on our UX work and demonstrated a genuine commitment to user research. Her ability to deeply understand user needs and translate them into thoughtful design solutions was evident throughout."</p>
+        <div style="font-size:.8rem;font-weight:500;">Yramis Alcequiare</div>
+        <div style="font-family:var(--mono);font-size:.68rem;color:var(--muted);">Data Systems Lead · WHO / PAHO</div>
       </div>
-      <div class="photo-sub">
-        <img src="images/photo-2.jpg" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:var(--text-muted);font-size:0.75rem;text-align:center;\'>📖 Reading</span>'" />
+      <div style="background:var(--bg2);border-radius:14px;padding:1.5rem;">
+        <p style="font-size:.87rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem;">"Meenal, it was a real pleasure working with you. Your passion, creativity and commitment made this project a success. You made a real difference."</p>
+        <div style="font-size:.8rem;font-weight:500;">Heike</div>
+        <div style="font-family:var(--mono);font-size:.68rem;color:var(--muted);">Project Lead · Safexpress</div>
       </div>
-      <div class="photo-sub">
-        <img src="images/photo-3.jpg" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:var(--text-muted);font-size:0.75rem;text-align:center;\'>☕ Chai</span>'" />
+      <div style="background:var(--bg2);border-radius:14px;padding:1.5rem;">
+        <p style="font-size:.87rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem;">"Congratulations Meenal! Your ability to execute on the RSP project flawlessly — the dedication and attention to detail truly shone through in the final output."</p>
+        <div style="font-size:.8rem;font-weight:500;">Abhishek</div>
+        <div style="font-family:var(--mono);font-size:.68rem;color:var(--muted);">Product Stakeholder · Roche</div>
       </div>
     </div>
   </div>
-
-  <!-- Beyond Work Section -->
-  <section class="section" style="border-top:1px solid var(--border);">
-    <div class="reveal">
-      <div class="section-label">Beyond Work</div>
-      <h2 class="section-title" style="margin-bottom:2.5rem;">When I'm not designing, <em>I'm…</em></h2>
+</div>
+<footer id="contact">
+  <div class="reveal">
+    <div class="footer-thanks">Thank you for your time!</div>
+    <h2 class="footer-title">Let's grab a <em>chai ☕</em> together!</h2>
+    <p class="footer-sub">Always open to great work and good conversations.</p>
+    <div class="footer-links">
+      <a href="mailto:karpagameenal@gmail.com" class="footer-btn footer-btn-fill">✉ Contact Meee</a>
+      <a href="https://linkedin.com/in/karpagameenal" target="_blank" class="footer-btn footer-btn-out">↗ LinkedIn</a>
     </div>
-    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem;">
-      <div class="testimonial-card reveal reveal-delay-1">
-        <div style="font-size:2rem; margin-bottom:1rem;">📚</div>
-        <h3 style="font-family:var(--font-display); font-size:1.1rem; margin-bottom:0.5rem;">Lost in a novel</h3>
-        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">I read a lot — mostly fiction. Simple stories, deep characters. It's where I rest and find new ways to see people.</p>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-2">
-        <div style="font-size:2rem; margin-bottom:1rem;">✍️</div>
-        <h3 style="font-family:var(--font-display); font-size:1.1rem; margin-bottom:0.5rem;">Trying to write</h3>
-        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">I try to write, now and then. Thoughts, fragments, beginnings. Nothing finished yet — but the trying counts.</p>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-3">
-        <div style="font-size:2rem; margin-bottom:1rem;">🎨</div>
-        <h3 style="font-family:var(--font-display); font-size:1.1rem; margin-bottom:0.5rem;">Drawing & painting</h3>
-        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">Sometimes I draw, sometimes I paint. Not often enough, but it keeps my hands connected to making things slowly.</p>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-4">
-        <div style="font-size:2rem; margin-bottom:1rem;">☕</div>
-        <h3 style="font-family:var(--font-display); font-size:1.1rem; margin-bottom:0.5rem;">Meeting new people</h3>
-        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">Big-time chai lover and an even bigger fan of conversations. I genuinely love meeting new people and knowing their world.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials on About -->
-  <section class="section" style="background:var(--bg-card);">
-    <div class="section-header reveal">
-      <div>
-        <div class="section-label">Kind Words</div>
-        <h2 class="section-title">What collaborators <em>say</em></h2>
-      </div>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal reveal-delay-1">
-        <p class="testimonial-text">Meenal made a strong contribution on our UX work and demonstrated a genuine commitment to user research. Her ability to deeply understand user needs and translate them into thoughtful design solutions was evident throughout the project.</p>
-        <div class="testimonial-author">
-          <span class="testimonial-name">Yramis Alcequiare</span>
-          <span class="testimonial-role">Data Systems Lead · WHO / PAHO</span>
-        </div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-2">
-        <p class="testimonial-text">Meenal, it was a real pleasure working with you. Your passion, creativity and commitment made this project a success. I'm so glad we had the chance to work together — you made a real difference.</p>
-        <div class="testimonial-author">
-          <span class="testimonial-name">Heike</span>
-          <span class="testimonial-role">Project Lead · Safexpress</span>
-        </div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-3">
-        <p class="testimonial-text">Congratulations Meenal! Your ability to execute on the RSP project flawlessly — the dedication and attention to detail — truly shone through in the final output.</p>
-        <div class="testimonial-author">
-          <span class="testimonial-name">Abhishek</span>
-          <span class="testimonial-role">Product Stakeholder · Roche</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="contact-section" id="contact">
-    <div class="reveal">
-      <div class="section-label" style="color:rgba(245,242,238,0.4);">Get In Touch</div>
-      <h2 class="contact-title">Let's build something<br/><em>meaningful.</em></h2>
-      <p class="contact-sub">Open to senior UX roles, design consulting, and collaborative research projects.</p>
-      <div class="contact-links">
-        <a href="mailto:meenal@example.com" class="btn-contact">✉ Send an Email</a>
-        <a href="https://linkedin.com/in/karpagameenal" target="_blank" class="btn-contact-outline">↗ LinkedIn</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2025 Karpaga Meenal. All rights reserved.</span>
-      <nav class="footer-nav">
-        <a href="work.html">Work</a>
-        <a href="writing.html">Writing</a>
-      </nav>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">🖤 2025 Karpaga Meenal</span>
+    <nav class="footer-nav"><a href="work.html">Work</a><a href="writing.html">Writing</a></nav>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body></html>

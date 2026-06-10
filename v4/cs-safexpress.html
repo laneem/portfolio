@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Safexpress — Karpaga Meenal</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="cursor" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div>
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">KM</a>
+  <div class="nav-right">
+    <ul class="nav-links"><li><a href="work.html">My Projects</a></li><li><a href="about.html">About Me</a></li><li><a href="writing.html">Writing</a></li></ul>
+    <a href="index.html#contact" class="nav-btn">👋 Let's Catchup</a>
+  </div>
+</nav>
+
+<div class="cs-hero">
+  <a href="work.html" class="cs-back"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Back to Work</a>
+  <div class="cs-meta reveal">
+    <div class="cs-meta-i"><span class="cs-meta-l">Role</span><span class="cs-meta-v">Senior UX Designer</span></div>
+    <div class="cs-meta-i"><span class="cs-meta-l">Platform</span><span class="cs-meta-v">Mobile · Android (Zebra)</span></div>
+    <div class="cs-meta-i"><span class="cs-meta-l">Client</span><span class="cs-meta-v">Safexpress</span></div>
+    <div class="cs-meta-i"><span class="cs-meta-l">Domain</span><span class="cs-meta-v">Logistics · Warehouse Ops</span></div>
+    <div class="cs-meta-i"><span class="cs-meta-l">Year</span><span class="cs-meta-v">2024</span></div>
+  </div>
+  <h1 class="cs-h1 reveal">Inbound Transshipment — <em>Unloading Redesign</em> for Safexpress</h1>
+  <p class="cs-lead reveal">Safexpress's inbound transshipment process was clogged at the unloading stage — manual workflows, weak visibility for team leads, high error rates in scanning, delaying downstream dispatch. I led the design effort across hub visits, stakeholder workshops, and agile sprints to deliver a fully functional unloading management system.</p>
+  <div class="cs-cover reveal">
+    <img src="images/safe-cover.png" alt="Safexpress cover" onerror="this.parentElement.innerHTML='<div class=\'cs-cover-ph\'>📦 Add your Safexpress hero image<br/><span style=\'font-size:.65rem;color:var(--accent)\'>images/safe-cover.png</span></div>'"/>
+  </div>
+</div>
+
+<div class="cs-body">
+
+  <div class="cs-stats reveal">
+    <div class="cs-stat"><div class="cs-stat-n">10K<span>+</span></div><div class="cs-stat-l">Frontline workers impacted</div></div>
+    <div class="cs-stat"><div class="cs-stat-n">4<span>/12</span></div><div class="cs-stat-l">Hub Visits / Workshops</div></div>
+    <div class="cs-stat"><div class="cs-stat-n">5</div><div class="cs-stat-l">Stakeholder interviews</div></div>
+    <div class="cs-stat"><div class="cs-stat-n">20<span>/4</span></div><div class="cs-stat-l">User interviews / Whiteboard sessions</div></div>
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Challenge</div>
+    <h2>Modernizing operations with <em>minimal disruption</em> to familiar workflows</h2>
+    <p>Unloading operations were challenged by inconsistent unloading times, limited real-time visibility, and reliance on manual coordination. Scanning mismatches and delayed system updates prevented supervisors from accurately tracking progress, resulting in reactive decision-making and frequent team idle periods.</p>
+    <p>Communication on the floor was largely manual — verbal updates and phone calls — leading to confusion, misalignment across teams, and avoidable downtime. Reliability and usability issues with the handheld application disrupted workflows and reduced confidence in system data, further impacting productivity and data accuracy.</p>
+    <p>The lack of clear performance metrics and real-time dashboards limited effective performance monitoring and accountability across shifts. Overall, insufficient automation and digital transparency created operational inefficiencies, reduced labour utilisation, and hindered consistent execution of unloading activities.</p>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Warehouse Site Visit — Hub Operations Overview</span>
+    Add your hub visit/warehouse photo<br/>images/safe-hub.png
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Approach</div>
+    <h2>Ride-along research leads to <em>empathy and uncovering opportunities</em></h2>
+    <p>To observe and document the workflows at various functional areas, the team and I split up to different areas of the warehouse to shadow employees. Over the course of a few days of shadowing, we gathered dozens of photos, pages of notes, and videos. Most interesting were the various paper-based workarounds that had been created to fill gaps in the system.</p>
+    <p>During the stakeholder workshop and hub visit, the team provided a walkthrough focusing on how goods are received and unloaded at the hub. The session helped visualise the complete operational flow — from arrival and dock allocation to unloading, sorting, and movement to outbound areas.</p>
+  </div>
+
+  <div class="cs-2col reveal">
+    <div class="cs-img-ph" style="min-height:220px">
+      <span class="ph-label">Shadowing Field Notes / Warehouse Photos</span>
+      images/safe-field-1.png
+    </div>
+    <div class="cs-img-ph" style="min-height:220px">
+      <span class="ph-label">Paper-based Workarounds Documented</span>
+      images/safe-field-2.png
+    </div>
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">User Research</div>
+    <h2>User Interview of <em>Team Members</em></h2>
+    <p><strong>Team Member — Unloader (Primary User):</strong> Objective: To understand the actual pain points and behavioural patterns of team members who perform physical unloading and scanning at the transshipment hub. Key insights: Assignments are unclear until verbally told. Multiple clicks needed for each scan slows workflow. Wants a simple, fast interface with minimal steps.</p>
+    <p><strong>Experienced Team Member (4+ yrs):</strong> Key insights: More paper notes when app fails to sync. Works faster with visual cues and fewer forms. Wants sound/vibration feedback for successful scans.</p>
+    <p><strong>New Team Member (joined &lt;6 months):</strong> Key insights: Finds app too technical and confusing. Icons unclear and actions take too long. Needs step-by-step guided flow for beginners.</p>
+    <p><strong>Shift Lead — Field Supervisor:</strong> Key insights: Relies on manual headcount and verbal updates. No visibility of who is idle or busy. Wants system-generated task rotation and alerts.</p>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">User Interview Summary — Personas & Insights Grid</span>
+    Add your user research summary image<br/>images/safe-research.png
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Research Synthesis</div>
+    <h2>Outcome of interviews — <em>3 core opportunity areas</em></h2>
+    <p>The combined interviews revealed three core opportunity areas that directly informed the redesign: <strong>1 — Real-Time Transparency:</strong> A live dashboard for supervisors and a visible queue for the team. <strong>2 — Simplified Workflow:</strong> Reduced navigation steps and offline scan caching. <strong>3 — Empowered Users:</strong> Self-assigned next tasks and performance tracking for motivation.</p>
+  </div>
+
+  <div class="cs-2col reveal">
+    <div class="cs-img-ph" style="min-height:200px">
+      <span class="ph-label">Persona — Rajesh Kumar (Transshipment Inbound TM)</span>
+      images/safe-persona.png
+    </div>
+    <div class="cs-img-ph" style="min-height:200px">
+      <span class="ph-label">Journey Map — TL & TM (Unloading)</span>
+      images/safe-journey.png
+    </div>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Full Persona Card — Demographics, Goals, Challenges, Tech Use</span>
+    Add your full persona image<br/>images/safe-persona-full.png
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Re-approach</div>
+    <h2>Product visioning workshops <em>pave the way for a clearer future</em></h2>
+    <p>Over the course of a week, the project leadership and I led a series of visioning workshops to level-set on the scope of the project and deep-dive into each functional area. Armed with several big whiteboards, I facilitated discussions with the client's functional team and subject-matter experts to define Happy Path and Unhappy Paths for each functional area. We then did high-level sketches of key screens.</p>
+    <p>Since the week-long visioning workshops were not initially part of the project timeline, I also reworked the design team timeline to account for the change in scope as well as an extension of the project. Having all this information made visible helped align all stakeholders and gave the design team more solid requirements to work from.</p>
+  </div>
+
+  <div class="cs-2col reveal">
+    <div class="cs-img-ph" style="min-height:220px">
+      <span class="ph-label">Visioning Workshop — Whiteboard Session</span>
+      images/safe-workshop-1.png
+    </div>
+    <div class="cs-img-ph" style="min-height:220px">
+      <span class="ph-label">Happy Path / Unhappy Path Flow Sketches</span>
+      images/safe-workshop-2.png
+    </div>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Design System Page — Actions, Components (Desktop & Mobile)</span>
+    Add your design system image<br/>images/safe-design-system.png
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Detailed User Flows — Unloading, Scanning, Completion</span>
+    Add your user flow diagrams<br/>images/safe-flows.png
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Design</div>
+    <h2>A versatile and robust system that <em>follows UX best practices</em></h2>
+    <p>The Unloading Dashboard was designed to make everything visible when team members start an unloading session. Clear visual hierarchy for quick scanning. Real-time status updates. Optimised for Zebra handheld Android devices.</p>
+    <p><strong>Key Features — Category Search & Tabs:</strong> Team members see a clear list of trucks assigned to them for the shift with priority indicators. <strong>Quick Scanning:</strong> Streamlined waybill scanning with exception handling for damaged or mislabelled packages. <strong>Vehicle Progress:</strong> Final sign-off and status change once all items are unloaded and verified.</p>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Unloading Dashboard — Home State (Handheld)</span>
+    Add your dashboard design<br/>images/safe-dashboard.png
+  </div>
+
+  <div class="cs-2col reveal">
+    <div class="cs-img-ph" style="min-height:280px">
+      <span class="ph-label">Scanning Flow — Scan → Summary → Pending → Complete</span>
+      images/safe-scan-flow.png
+    </div>
+    <div class="cs-img-ph" style="min-height:280px">
+      <span class="ph-label">Supervisor Dashboard — Real-time Team View</span>
+      images/safe-supervisor.png
+    </div>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Final Screens — All Key States (Mobile & Desktop)</span>
+    Add your complete screens overview<br/>images/safe-final.png
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Outcome</div>
+    <h2>A fully functional system and an <em>eager client team with new skills</em></h2>
+    <p>We successfully delivered a fully functional unloading management system that is currently being piloted in several warehouses and sets the foundation for additional features for the system to be scaled up. The client's functional team gained new skills in Agile methodology and user story writing, enabling them to continue iterating effectively with the development team.</p>
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Reflection</div>
+    <h2>Addressing the elephant in the room <em>saves more time in the future</em></h2>
+    <p>When the team first decided to pause to conduct the product visioning workshops, I was worried about how much that would impact our timelines. The design team was already behind schedule on several features due to churn with the requirements. However, stopping to re-visit the scope and user journeys ended up being just what we needed to move faster.</p>
+    <p>The 1-week pause in designing led to much more clarity and greatly reduced the number of iterations needed for each design flow. Sometimes, the fastest way to move forward is to stop and take a look around first.</p>
+  </div>
+
+  <div class="cs-nav-foot reveal">
+    <a href="work.html" class="cs-back" style="margin-bottom:0">← All Work</a>
+    <a href="cs-sbi.html" class="btn"><span>Next: SBI Yono →</span></a>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

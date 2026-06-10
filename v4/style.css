@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #F5F3EF;
+  color: #1A1A2E;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+/* ── CURSOR ── */
+.cursor { width: 10px; height: 10px; background: #1A1A2E; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: transform 0.1s; }
+.cursor-ring { width: 36px; height: 36px; border: 1.5px solid rgba(26,26,46,0.3); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: left 0.12s ease, top 0.12s ease; }
+
+/* ── NAV — exactly like Naisha's ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 2.5rem;
+  background: rgba(245,243,239,0.85);
+  backdrop-filter: blur(20px);
+}
+.nav-logo {
+  font-size: 1rem; font-weight: 700; letter-spacing: 0.02em;
+  color: #1A1A2E;
+}
+.nav-center {
+  display: flex; gap: 2.5rem; list-style: none;
+  position: absolute; left: 50%; transform: translateX(-50%);
+}
+.nav-center a {
+  font-size: 0.875rem; font-weight: 500; color: #1A1A2E;
+  transition: opacity 0.2s;
+}
+.nav-center a:hover { opacity: 0.5; }
+.nav-catchup {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: #2D4A3E; color: #fff;
+  border-radius: 100px; padding: 0.5rem 1.1rem;
+  font-size: 0.8rem; font-weight: 600;
+  transition: background 0.2s;
+}
+.nav-catchup:hover { background: #1e3329; }
+.nav-catchup-dot {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #fff; display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem;
+}
+
+/* ── HERO — Naisha exact layout ── */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 2.5rem 3rem;
+  overflow: hidden;
+}
+
+/* Photo — top right rectangle, like Naisha */
+.hero-photo {
+  position: absolute;
+  top: 0; right: 2.5rem;
+  width: 260px;
+  height: 340px;
+  overflow: hidden;
+  border-radius: 0 0 12px 12px;
+  background: #ddd;
+  z-index: 2;
+}
+.hero-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+}
+
+/* "Let's Catchup" floating button top right — like Naisha */
+.hero-catchup-float {
+  position: absolute;
+  top: 1rem; right: 2.5rem;
+  z-index: 3;
+}
+
+/* "hie! I'm" small italic top left area */
+.hero-greeting {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #1A1A2E;
+  margin-bottom: 0;
+  line-height: 1;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.1s forwards;
+}
+
+/* HUGE name */
+.hero-name {
+  font-size: clamp(4rem, 9vw, 9rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: #1A1A2E;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.2s forwards;
+}
+
+/* Bio — centered, below name, like Naisha */
+.hero-bio-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.35s forwards;
+}
+.hero-bio-icon { font-size: 2.5rem; flex-shrink: 0; }
+.hero-bio-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #1A1A2E;
+}
+.hero-bio-text strong { font-weight: 700; }
+
+/* Bottom meta row — scattered like Naisha */
+.hero-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.5s forwards;
+}
+.hero-meta-left, .hero-meta-center, .hero-meta-right {
+  font-size: 0.78rem;
+  color: #6B6875;
+  line-height: 1.5;
+}
+.hero-meta-center { text-align: center; }
+.hero-meta-right { text-align: right; }
+
+/* ── WORKROOM SECTION — "The Workroom" heading like Naisha ── */
+.projects-section {
+  padding: 4rem 2.5rem;
+}
+.projects-heading {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1A1A2E;
+  margin-bottom: 1.5rem;
+}
+
+/* Cards — exactly like Naisha:
+   Full width, LEFT = white box with text,
+   RIGHT = colored bg with image bleeding to edge */
+.proj-cards { display: flex; flex-direction: column; gap: 1rem; }
+
+.proj-card {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  min-height: 300px;
+  text-decoration: none;
+  color: #1A1A2E;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.proj-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+/* Left white text panel */
+.proj-left {
+  background: #fff;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 16px 0 0 16px;
+}
+.proj-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+.proj-desc {
+  font-size: 0.875rem;
+  color: #6B6875;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+.proj-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.proj-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  border: 1.5px solid #1A1A2E;
+  border-radius: 100px;
+  padding: 0.25rem 0.75rem;
+  color: #1A1A2E;
+}
+
+/* Right image panel — full bleed */
+.proj-right {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 16px 16px 0;
+}
+.proj-right img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+  transition: transform 0.5s ease;
+}
+.proj-card:hover .proj-right img { transform: scale(1.04); }
+.proj-right-bg {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; color: rgba(0,0,0,0.3);
+  font-weight: 500;
+  flex-direction: column; gap: 0.5rem;
+  text-align: center; padding: 1rem;
+}
+.proj-right-bg span { font-size: 0.65rem; opacity: 0.6; }
+
+/* Hover VIEW button like Naisha */
+.proj-view-btn {
+  position: absolute;
+  bottom: 1.5rem; right: 1.5rem;
+  background: #fff;
+  border-radius: 100px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1A1A2E;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.proj-card:hover .proj-view-btn { opacity: 1; transform: translateY(0); }
+
+/* See More */
+.see-more-wrap { text-align: center; padding: 2rem 0 0; }
+.see-more-btn {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1A1A2E;
+  border-bottom: 1.5px solid #1A1A2E;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+.see-more-btn:hover { opacity: 0.5; }
+
+/* Card colors like Naisha */
+.proj-card:nth-child(1) .proj-right { background: #B8C8E8; }
+.proj-card:nth-child(2) .proj-right { background: #C8C8C8; }
+.proj-card:nth-child(3) .proj-right { background: #D4C5B8; }
+.proj-card:nth-child(4) .proj-right { background: #C8D4C8; }
+
+/* ── ABOUT — exactly like Naisha's scattered layout ── */
+.about-section { padding: 4rem 2.5rem; position: relative; min-height: 700px; }
+.about-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1A1A2E;
+  margin-bottom: 0;
+}
+
+.about-scene {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  margin-top: 1.5rem;
+}
+
+/* Center photo — large, like Naisha */
+.about-main-photo {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ddd;
+  z-index: 2;
+}
+.about-main-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+}
+
+/* "You <3" speech bubble */
+.about-bubble {
+  position: absolute;
+  top: 8%; left: 50%; transform: translateX(-20%);
+  background: #2D4A3E;
+  color: #fff;
+  border-radius: 100px;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  z-index: 4;
+  white-space: nowrap;
+}
+
+/* Quote below bubble */
+.about-quote {
+  position: absolute;
+  top: 16%; left: 48%; transform: translateX(-35%);
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1A1A2E;
+  text-align: center;
+  z-index: 3;
+  line-height: 1.4;
+}
+
+/* Green personality card — bottom left like Naisha */
+.about-tag-card {
+  position: absolute;
+  bottom: 5%; left: 8%;
+  background: #2D4A3E;
+  color: #fff;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.6;
+  z-index: 4;
+  max-width: 240px;
+}
+.about-tag-card .jack {
+  font-size: 0.78rem;
+  opacity: 0.8;
+  margin-top: 0.35rem;
+  font-weight: 400;
+}
+
+/* Scattered hobby emojis */
+.about-emoji {
+  position: absolute;
+  font-size: 1.8rem;
+  z-index: 3;
+  animation: floatEmoji 3s ease-in-out infinite alternate;
+}
+@keyframes floatEmoji {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}
+
+/* Mini photos — top right like Naisha */
+.about-mini-grid {
+  position: absolute;
+  top: 5%; right: 5%;
+  display: flex; gap: 0.5rem;
+  z-index: 3;
+}
+.about-mini-photo {
+  width: 90px; height: 75px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ddd;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.about-mini-photo img { width: 100%; height: 100%; object-fit: cover; }
+.about-mini-ph {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* Scattered right emojis like Naisha */
+.about-right-items {
+  position: absolute;
+  right: 6%; top: 50%;
+  display: flex; flex-direction: column; gap: 0.75rem;
+  z-index: 3;
+  font-size: 1.6rem;
+}
+
+/* ── COMPANIES — logo strip exactly like Naisha ── */
+.companies-section {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid rgba(26,26,46,0.1);
+}
+.companies-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1A1A2E;
+  margin-bottom: 1.5rem;
+}
+.companies-logos {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.company-logo-item {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1A1A2E;
+  letter-spacing: -0.01em;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+.company-logo-item:hover { opacity: 1; }
+
+/* ── FOOTER — light bg like Naisha ── */
+footer {
+  background: #F5F3EF;
+  padding: 3rem 2.5rem 2rem;
+  border-top: 1px solid rgba(26,26,46,0.1);
+}
+.footer-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer-left {}
+.footer-thanks {
+  font-size: 0.78rem;
+  color: #6B6875;
+  margin-bottom: 0.5rem;
+}
+.footer-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #1A1A2E;
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+.footer-sub {
+  font-size: 0.85rem;
+  color: #6B6875;
+  margin-bottom: 1.5rem;
+}
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+.social-btn {
+  width: 42px; height: 42px;
+  border: 1.5px solid rgba(26,26,46,0.2);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  color: #1A1A2E;
+  transition: all 0.2s;
+}
+.social-btn:hover { background: #1A1A2E; color: #fff; border-color: #1A1A2E; }
+.footer-contact-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1A1A2E;
+  display: flex; align-items: center; gap: 0.4rem;
+  transition: opacity 0.2s;
+}
+.footer-contact-btn:hover { opacity: 0.5; }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(26,26,46,0.08);
+  font-size: 0.72rem;
+  color: #6B6875;
+}
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; }
+.d3 { transition-delay: 0.24s; } .d4 { transition-delay: 0.32s; }
+
+/* ── CASE STUDY PAGES ── */
+.cs-wrap { max-width: 960px; margin: 0 auto; padding: 7rem 2.5rem 5rem; }
+.cs-back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; color: #6B6875;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+.cs-back:hover { color: #1A1A2E; }
+.cs-meta-row { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.cs-meta-i { display: flex; flex-direction: column; }
+.cs-meta-l { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #6B6875; }
+.cs-meta-v { font-size: 0.82rem; font-weight: 600; }
+.cs-h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 0.75rem; }
+.cs-lead { font-size: 0.95rem; color: #6B6875; line-height: 1.75; margin-bottom: 2.5rem; max-width: 680px; }
+.cs-cover { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 3.5rem; min-height: 280px; background: #E8E8E8; display: flex; align-items: center; justify-content: center; }
+.cs-cover img { width: 100%; height: auto; }
+.cs-cover-ph { font-size: 0.8rem; color: #999; text-align: center; padding: 2rem; }
+.cs-stats { display: flex; padding: 1.75rem 2rem; border-radius: 16px; background: #EDEAE5; margin-bottom: 3rem; }
+.cs-stat { flex: 1; text-align: center; border-right: 1px solid rgba(26,26,46,0.1); padding: 0 1rem; }
+.cs-stat:last-child { border-right: none; }
+.cs-stat-n { font-size: 1.75rem; font-weight: 900; letter-spacing: -0.02em; line-height: 1; }
+.cs-stat-n span { color: #C4613A; }
+.cs-stat-l { font-size: 0.68rem; color: #6B6875; margin-top: 0.2rem; }
+.cs-section { margin-bottom: 3rem; }
+.cs-sec-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #C4613A; margin-bottom: 0.5rem; }
+.cs-section h2 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 0.75rem; }
+.cs-section p { font-size: 0.875rem; color: #6B6875; line-height: 1.82; margin-bottom: 0.75rem; }
+.cs-section p strong { color: #1A1A2E; font-weight: 600; }
+.cs-img-ph { border: 2px dashed rgba(26,26,46,0.15); border-radius: 14px; padding: 3rem 2rem; text-align: center; margin: 1.5rem 0; color: #999; }
+.cs-img-ph .ph-tag { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #C4613A; display: block; margin-bottom: 0.5rem; }
+.cs-img-ph p { font-size: 0.78rem; }
+.cs-img { width: 100%; border-radius: 14px; overflow: hidden; margin: 1.5rem 0; }
+.cs-img img { width: 100%; height: auto; }
+.cs-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+.cs-quote { background: #1A1A2E; color: #F5F3EF; border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; font-size: 1rem; font-style: italic; line-height: 1.7; }
+.cs-quote strong { font-style: normal; color: #C4613A; }
+.cs-footer-nav { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(26,26,46,0.1); padding-top: 2rem; margin-top: 2rem; }
+.btn-dark { display: inline-flex; align-items: center; gap: 0.4rem; background: #1A1A2E; color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; border-radius: 100px; padding: 0.65rem 1.4rem; transition: background 0.2s; }
+.btn-dark:hover { background: #2D4A3E; }
+
+/* OTHER PAGES */
+.page-wrap { max-width: 1100px; margin: 0 auto; padding: 7rem 2.5rem 4rem; }
+.page-h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; letter-spacing: -0.04em; margin-bottom: 0.5rem; }
+.page-sub { font-size: 0.9rem; color: #6B6875; margin-bottom: 3rem; }
+.work-grid { display: flex; flex-direction: column; gap: 1rem; }
+.writing-empty { border: 2px dashed rgba(26,26,46,0.12); border-radius: 16px; padding: 5rem 2rem; text-align: center; }
+.writing-empty p { font-size: 0.9rem; color: #6B6875; line-height: 1.8; }
+
+/* About page */
+.about-pg { display: grid; grid-template-columns: 340px 1fr; gap: 5rem; align-items: start; }
+.about-pg-photo { border-radius: 16px; overflow: hidden; aspect-ratio: 3/4; background: #ddd; }
+.about-pg-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.about-pg-right h2 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; margin: 2rem 0 0.75rem; }
+.about-pg-right p { font-size: 0.875rem; color: #6B6875; line-height: 1.8; margin-bottom: 0.75rem; }
+.skill-wrap { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 1rem 0; }
+.stag { font-size: 0.68rem; font-weight: 500; border: 1.5px solid rgba(26,26,46,0.2); border-radius: 100px; padding: 0.2rem 0.7rem; color: #6B6875; transition: all 0.2s; }
+.stag:hover { border-color: #1A1A2E; color: #1A1A2E; }
+.int-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1.25rem 0; }
+.int-card { background: #EDEAE5; border-radius: 12px; padding: 1.1rem; }
+.int-card .ico { font-size: 1.4rem; margin-bottom: 0.4rem; }
+.int-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.2rem; }
+.int-card p { font-size: 0.75rem; color: #6B6875; line-height: 1.55; }
+.tcard { background: #EDEAE5; border-radius: 12px; padding: 1.25rem; margin-bottom: 0.75rem; }
+.tcard p { font-size: 0.82rem; color: #6B6875; line-height: 1.75; font-style: italic; margin-bottom: 0.75rem; }
+.tcard .tname { font-size: 0.8rem; font-weight: 700; }
+.tcard .trole { font-size: 0.68rem; color: #6B6875; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 900px) {
+  .hero-photo { width: 140px; height: 180px; }
+  .hero-name { font-size: clamp(3rem, 12vw, 5rem); }
+  .proj-card { grid-template-columns: 1fr; min-height: auto; }
+  .proj-left { border-radius: 16px 16px 0 0; }
+  .proj-right { border-radius: 0 0 16px 16px; min-height: 200px; }
+  .about-scene { height: auto; min-height: 500px; }
+  .about-main-photo { position: relative; left: auto; top: auto; transform: none; margin: 2rem auto; }
+  .about-tag-card, .about-bubble, .about-quote, .about-mini-grid, .about-right-items { display: none; }
+  .about-pg { grid-template-columns: 1fr; gap: 2rem; }
+  nav { padding: 1rem 1.25rem; }
+  .nav-center { display: none; }
+  .page-wrap, .projects-section, .about-section, .companies-section, footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  body { cursor: auto; }
+  .cursor, .cursor-ring { display: none; }
+}

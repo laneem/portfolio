@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>SBI Yono Business — Karpaga Meenal</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="cursor" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div>
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">KM</a>
+  <div class="nav-right">
+    <ul class="nav-links"><li><a href="work.html">My Projects</a></li><li><a href="about.html">About Me</a></li><li><a href="writing.html">Writing</a></li></ul>
+    <a href="index.html#contact" class="nav-btn">👋 Let's Catchup</a>
+  </div>
+</nav>
+
+<div class="cs-hero">
+  <a href="work.html" class="cs-back"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Back to Work</a>
+  <div class="cs-meta reveal">
+    <div class="cs-meta-i"><span class="cs-meta-l">Role</span><span class="cs-meta-v">Senior UX Designer</span></div>
+    <div class="cs-meta-i"><span class="cs-meta-l">Platform</span><span class="cs-meta-v">Web · Enterprise SaaS</span></div>
+    <div class="cs-meta-i"><span class="cs-meta-l">Client</span><span class="cs-meta-v">SBI Yono Business</span></div>
+    <div class="cs-meta-i"><span class="cs-meta-l">Domain</span><span class="cs-meta-v">Banking · Profile Management</span></div>
+    <div class="cs-meta-i"><span class="cs-meta-l">Users</span><span class="cs-meta-v">7 distinct user types</span></div>
+  </div>
+  <h1 class="cs-h1 reveal">Managing Users, <em>Made Effortless</em></h1>
+  <p class="cs-lead reveal">SBI Yono Business is a unified digital platform serving corporate and business banking customers across India. I redesigned the Profile Management system — transforming a basic info screen into an intelligent, modular control centre that adapts to seven distinct user types.</p>
+  <div class="cs-cover reveal">
+    <img src="images/sbi-cover.png" alt="SBI cover" onerror="this.parentElement.innerHTML='<div class=\'cs-cover-ph\' style=\'background:#EEF0F8;\'>🏦 Add your SBI hero image here<br/><span style=\'font-size:.65rem;color:var(--accent)\'>images/sbi-cover.png</span></div>'"/>
+  </div>
+</div>
+
+<div class="cs-body">
+
+  <div class="cs-stats reveal">
+    <div class="cs-stat"><div class="cs-stat-n">7</div><div class="cs-stat-l">User types designed for</div></div>
+    <div class="cs-stat"><div class="cs-stat-n">8–10</div><div class="cs-stat-l">Users interviewed</div></div>
+    <div class="cs-stat"><div class="cs-stat-n">1</div><div class="cs-stat-l">Modular system for all</div></div>
+    <div class="cs-stat"><div class="cs-stat-n">3</div><div class="cs-stat-l">Key design decisions</div></div>
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Introduction</div>
+    <h2>The context — what is <em>SBI Yono Business?</em></h2>
+    <p>SBI Yono Business is a unified digital platform serving corporate and business banking customers across India, handling everything from payments to trade finance to cash management — for solo entrepreneurs to large organisations. I was brought in as part of a larger effort to revamp the entire Yono Business experience. My piece of the puzzle? The Profile Management.</p>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Existing Profile Screen — Before State</span>
+    Add your before-state screenshot<br/>images/sbi-before.png
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Initial Understanding</div>
+    <h2>Seven types of users <em>walk into a bank…</em></h2>
+    <p>The existing profile screen was very minimal. Users could see their name, email, mobile number, and not much else. The task seemed simple enough — enhance the profile section to give users more control and information. But Yono Business doesn't just have users. It has seven distinct types, each with completely different needs. My job was to design one Profile system that works for all of them. Easy, right?</p>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Target Audience Map — 7 User Types Diagram</span>
+    Add your user types diagram<br/>images/sbi-users.png
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Constraint</div>
+    <h2>No access to real data — <em>flying blind</em></h2>
+    <p>No access to analytics data because the client wasn't comfortable sharing usage data, which meant flying blind unless talking directly to users. This made user interviews not just helpful — but essential.</p>
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Research</div>
+    <h2>Talking to real people — <em>the major pain points</em></h2>
+    <p>I interviewed 8–10 users across different user types and had multiple conversations with stakeholders to understand both user needs and business requirements.</p>
+    <p><strong>Pain Point 1:</strong> Existing profile showing basic info but users couldn't see their critical information. <strong>Pain Point 2:</strong> Users in complex hierarchy had zero visibility into their organisational structure. <strong>Pain Point 3:</strong> Password management, 2FA, and IP restrictions existed but were poorly organised. <strong>Pain Point 4:</strong> Role-based users had no visibility into their permissions or authorisation limits. <strong>Pain Point 5:</strong> Users didn't know their daily or per-transaction limits, causing failed transactions. <strong>Pain Point 6:</strong> No indication whether profile updates needed approval or would happen instantly.</p>
+  </div>
+
+  <div class="cs-2col reveal">
+    <div class="cs-img-ph" style="min-height:220px">
+      <span class="ph-label">Research FigJam — Pain Points Grouped by Theme</span>
+      images/sbi-research-1.png
+    </div>
+    <div class="cs-img-ph" style="min-height:220px">
+      <span class="ph-label">Stakeholder Interview Notes</span>
+      images/sbi-research-2.png
+    </div>
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">The Aha Moment</div>
+    <h2>We weren't redesigning a profile screen. <em>We were designing a control centre.</em></h2>
+    <p>Once I understood the complexity, I knew a one-size-fits-all approach wouldn't cut it. I needed multiple variations of the profile screen, but they couldn't feel like completely different products. So the first thing I did was organise all my research into FigJam and started grouping pain points by theme. The big question: do I design seven completely different profile experiences, or one flexible system that adapts?</p>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">FigJam — Research Synthesis & Theme Grouping</span>
+    Add your FigJam synthesis image<br/>images/sbi-figjam.png
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Approach</div>
+    <h2>Option A vs Option B — <em>the decision</em></h2>
+    <p><strong>Option A — Seven separate profiles:</strong> Complete control per user type, but inconsistent product experience and unsustainable to maintain.</p>
+    <p><strong>Option B — One modular system:</strong> Common elements (name, contact info, security settings) stay consistent. Role-specific elements (permissions, approval workflows, team hierarchy) appear only for users who need them. The interface adapts intelligently based on who is logged in. For example: a Saral user wouldn't see "Team Management" but a Vistaar admin would.</p>
+    <p><strong>I chose Option B</strong> — with a twist. Create a modular system where the interface adapts intelligently based on user type.</p>
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Information Architecture</div>
+    <h2>Sketching the <em>Information Architecture</em></h2>
+    <p>Based on user needs and the existing four-tab structure, I restructured the information architecture into a clearer, more logical hierarchy. Started with lo-fi sketches, went through multiple rounds of internal reviews, tested different layouts through A/B testing, and did guerrilla testing to see which approaches felt more intuitive.</p>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Information Architecture Diagram — Restructured Hierarchy</span>
+    Add your IA diagram<br/>images/sbi-ia.png
+  </div>
+
+  <div class="cs-2col reveal">
+    <div class="cs-img-ph" style="min-height:240px">
+      <span class="ph-label">Lo-fi Wireframes — Navigation Options (Left Nav vs Single Page)</span>
+      images/sbi-wire-1.png
+    </div>
+    <div class="cs-img-ph" style="min-height:240px">
+      <span class="ph-label">A/B Testing Variants — Layout Comparison</span>
+      images/sbi-wire-2.png
+    </div>
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Decision 1</div>
+    <h2>The iteration grind — <em>navigation structure</em></h2>
+    <p><strong>Option 1 — Left navigation:</strong> Organising information into distinct categories: Profile, Security, Payment, Settings. Groups related information together and provides clear mental models. <strong>Option 2 — Single-page layout:</strong> All information accessible through one continuous scroll, sections for Primary Contact, Business Information, and User Hierarchy visible at once.</p>
+    <p><strong>We went with Option 1</strong> because this structure scales better as features are added and reduces cognitive load by letting users focus on one category at a time instead of processing everything in a single overwhelming scroll.</p>
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Decision 2</div>
+    <h2>Team hierarchy <em>visualisation</em></h2>
+    <p><strong>Option 1 — Collapsible list:</strong> Showing the Regulator at the top, with expandable sections for Administrators and Transaction Users. <strong>Option 2 — Flowchart-style visualisation:</strong> Showing hierarchical relationships with connecting lines branching down through the structure.</p>
+    <p><strong>We went with Option 2</strong> — but with an expandable view twist. At a glance, users can see who reports to whom, how many people are under each admin, and where they fit in the organisation.</p>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Team Hierarchy — Flowchart Design with Expandable View</span>
+    Add your hierarchy design image<br/>images/sbi-hierarchy.png
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Decision 3</div>
+    <h2>Designing for <em>role-based adaptability</em></h2>
+    <p>This was the trickiest part. The interface needed to be smart enough to show/hide sections based on user type without feeling inconsistent. I created a matrix to think through what appears for whom and why — mapping each of the seven user types against all available profile modules.</p>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Role-Feature Matrix — What Shows for Whom</span>
+    Add your role matrix image<br/>images/sbi-matrix.png
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Visual Design</div>
+    <h2>The final designs — <em>five key screens</em></h2>
+    <p><strong>1 — Visibility of Required Information:</strong> Comprehensive personal details, company information, and team structure all surfaced clearly. <strong>2 — Understanding Team Structure at a Glance:</strong> Visual org chart showing complete hierarchy with role badges for instant recognition. <strong>3 — Consolidated Security Access:</strong> All payment-related features in one place — no more hunting across different areas. <strong>4 — Visibility into Permissions & Authorisation Limits:</strong> Who can authorise transfers, their details, and limits — transparent and clear. <strong>5 — Account-Level Notification Control:</strong> Per-account SMS notification toggles with bulk actions and pagination.</p>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Final Design — Profile Overview Screen</span>
+    Add your profile screen design<br/>images/sbi-final-1.png
+  </div>
+
+  <div class="cs-2col reveal">
+    <div class="cs-img-ph" style="min-height:300px">
+      <span class="ph-label">Final Design — Security & Payment Tab</span>
+      images/sbi-final-2.png
+    </div>
+    <div class="cs-img-ph" style="min-height:300px">
+      <span class="ph-label">Final Design — Team Hierarchy / Permissions View</span>
+      images/sbi-final-3.png
+    </div>
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Final Design — Notification Settings / Full Screen Overview</span>
+    Add your notifications screen<br/>images/sbi-final-4.png
+  </div>
+
+  <div class="cs-img-ph reveal">
+    <span class="ph-label">Responsive Layouts — Desktop Full Width</span>
+    Add your desktop layout image<br/>images/sbi-desktop.png
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Testing</div>
+    <h2>What worked — and what <em>needed tweaking</em></h2>
+    <p><strong>What worked:</strong> Users could finally see the information they'd been asking for. The role-based sections made sense without overwhelming simpler user types. Navigation felt natural even with all the new features. Security management was actually understandable.</p>
+    <p><strong>What needed tweaking:</strong> Some terminology needed adjustment based on how users actually talked about things. A few sections needed reordering based on what people looked for first. Minor layout refinements for better readability. After incorporating feedback and getting final approval from stakeholders, I handed everything off to the development team.</p>
+  </div>
+
+  <div class="cs-section reveal">
+    <div class="cs-section-label">Reflection</div>
+    <h2>There's no such thing as <em>"just a profile screen"</em></h2>
+    <p>This project taught me that the most interesting design challenges aren't always the flashiest ones. Taking something as fundamental as a profile screen and transforming it into a genuinely useful tool for thousands of corporate banking users — that's the kind of work that quietly matters. Would I underestimate the complexity next time? Hopefully not. That's the story of how I learned that in enterprise design, there's no such thing as "just a profile screen."</p>
+  </div>
+
+  <div class="cs-nav-foot reveal">
+    <a href="work.html" class="cs-back" style="margin-bottom:0">← All Work</a>
+    <a href="cs-roche.html" class="btn"><span>Next: Roche RSP →</span></a>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

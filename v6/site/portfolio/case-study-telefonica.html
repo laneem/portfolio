@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Telefónica Selfcare — Karpaga Meenal</title>
+<meta name="description" content="Designing one selfcare platform that serves multiple Telefónica brands without rebuilding the experience for each." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html">Karpaga&nbsp;<b>Meenal</b></a>
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="index.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="is-cta" href="Karpaga_Meenal_Resume_2026.pdf" download>Resume ↓</a>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle colour theme">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" stroke-linejoin="round"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="cs-hero wrap">
+    <p class="eyebrow reveal">Case 01 · Telecom</p>
+    <h1 class="cs-hero__title reveal">Enabling multi-brand consistency through a unified selfcare platform</h1>
+    <p class="cs-hero__tag reveal">One self-service experience, several Telefónica brands — each keeping its identity, none rebuilt from scratch.</p>
+
+    <div class="cs-figure cs-hero__figure reveal">
+      <span class="ph">[ HERO IMAGE — selfcare home across two brand themes ]</span>
+    </div>
+
+    <dl class="cs-hero__meta reveal">
+      <div><dt>Role</dt><dd>Lead UX Designer</dd></div>
+      <div><dt>Team</dt><dd>Embedded in a 4-person product team</dd></div>
+      <div><dt>Timeline</dt><dd>9 months · 2025</dd></div>
+      <div><dt>Domain</dt><dd>Telecom selfcare / B2C</dd></div>
+    </dl>
+  </section>
+
+  <!-- LAYOUT -->
+  <div class="wrap cs-layout">
+
+    <!-- STICKY INDEX -->
+    <aside class="cs-index" aria-label="On this page">
+      <span class="cs-index__label">On this page</span>
+      <ol>
+        <li><a href="#summary" class="active">Summary</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#context">Context</a></li>
+        <li><a href="#role">Role</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#decisions">Decisions</a></li>
+        <li><a href="#design-work">Design work</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+      </ol>
+    </aside>
+
+    <!-- BODY -->
+    <div class="cs-body">
+
+      <section class="cs-section reveal" id="summary">
+        <h2>Summary</h2>
+        <p>Telefónica needed a single selfcare platform — where customers manage plans, billing, and support — to serve multiple brands at once. The constraint: each brand had to feel like itself, but the team couldn't afford to design and maintain a separate product for every one. I led UX on a task-first, themeable system that one product team can ship and extend across brands instead of forking the experience four ways.</p>
+        <ul class="tags" style="margin-top:1.2rem">
+          <li>Multi-brand system</li><li>Selfcare / account management</li><li>Contextual inquiry</li><li>Usability testing</li><li>Affinity mapping</li>
+        </ul>
+      </section>
+
+      <section class="cs-section reveal" id="impact">
+        <h2>Impact</h2>
+        <div class="metric-row">
+          <div class="metric"><div class="num"><em>4</em></div><span class="lbl">brands served by one platform</span></div>
+          <div class="metric"><div class="num"><em>1</em></div><span class="lbl">themeable pattern library, not 4 codebases</span></div>
+          <div class="metric"><div class="num"><em>~30%</em><span class="note" style="display:block;margin-top:.5rem">verify</span></div><span class="lbl">fewer steps to top selfcare tasks</span></div>
+        </div>
+        <p>What shipped: a task-first home, a guided onboarding flow, contextual quick actions, and a fully state-covered component set that re-themes per brand from a shared token layer. The team now adds a brand by configuring tokens and content, not by rebuilding screens.</p>
+        <p class="note">Numbers above are sample framing — replace with your verified analytics (task-completion delta, support-call deflection, time-to-launch for a new brand) before sharing this page.</p>
+      </section>
+
+      <section class="cs-section reveal" id="context">
+        <h2>Context — why this mattered</h2>
+        <p>Selfcare is where a telecom either deflects a support call or causes one. Every task a customer can't finish online becomes a call centre cost and a churn risk. Telefónica's challenge was that it operates several brands, and the obvious path — a bespoke product per brand — multiplies build cost, fragments quality, and guarantees the brands drift apart over time.</p>
+        <p>The business question underneath the design brief was really: <em>how do we get the economics of one platform with the market presence of many brands?</em> That framing is what made this a systems problem before it was a screens problem.</p>
+        <p class="pull">If consistency is the goal, the unit of design can't be the screen — it has to be the pattern.</p>
+      </section>
+
+      <section class="cs-section reveal" id="role">
+        <h2>My role</h2>
+        <p>I led UX, embedded in a four-person product team alongside a PM and engineering. What I specifically owned:</p>
+        <ul>
+          <li><b>Owned:</b> the end-to-end selfcare flows, the task-first IA, the themeable component and state system, and the usability-testing programme that validated it.</li>
+          <li><b>Owned:</b> the design decisions and the rationale taken to stakeholders — including which behaviours stayed shared across brands and which were allowed to vary.</li>
+          <li><b>Collaborated:</b> with the PM on prioritisation and scope, and with engineering on how theming was implemented so the design system mapped cleanly to tokens in code.</li>
+        </ul>
+      </section>
+
+      <section class="cs-section reveal" id="research">
+        <h2>Research &amp; synthesis</h2>
+        <p>I ran contextual inquiry and usability testing with real customers across brands, and audited the existing flows for where people stalled. Two findings shaped everything that followed.</p>
+        <p><b>One:</b> across brands, customers wanted the same handful of things first — check a bill, change a plan, fix a problem. The brand mattered for trust and tone, not for the structure of the task. <b>Two:</b> people didn't read the home screen as a brochure; they scanned it for the one job they came to do, and bounced to the call centre the moment that job wasn't obvious.</p>
+        <p>Affinity mapping the sessions made the split clear: a layer of <em>shared behaviour</em> (what the tasks are and how they flow) sitting under a layer of <em>brand expression</em> (how it looks and sounds). That separation became the spine of the system.</p>
+        <div class="cs-figure cs-figure--tall"><span class="ph">[ IMAGE — affinity map / shared-vs-brand layer diagram ]</span></div>
+      </section>
+
+      <section class="cs-section reveal" id="decisions">
+        <h2>Design decisions</h2>
+        <p>The hard part wasn't drawing screens — it was deciding where to hold the line on consistency and where to let brands breathe. Three decisions carried the project.</p>
+
+        <div class="decision">
+          <div class="decision__tension">Tension · Brand freedom vs. one maintainable system</div>
+          <h3>Task-first home, brand-themed — not brand-first home, task-buried</h3>
+          <p>The pull from the business was a richly branded landing experience per brand. I ruled that out as the organising principle: it buries the tasks customers actually come for and forces a different layout per brand. <span class="ruled">Considered and dropped: per-brand bespoke homepages.</span> Instead I made the home <em>task-first</em> — the top jobs surfaced immediately — and let brand live in theming, tone, and imagery layered over a shared structure. Brands stay distinct where it counts (identity) and identical where it pays off (behaviour and maintenance).</p>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Tension · Onboarding completeness vs. getting out of the way</div>
+          <h3>Guided onboarding that can be skipped, not a wall</h3>
+          <p>Selfcare onboarding wants to teach and verify, but every extra step is a place to lose someone who just wants to pay a bill. I designed a guided flow that scaffolds first-time users through setup and contextual quick actions that let returning users jump straight to a task. <span class="ruled">Ruled out: a mandatory linear onboarding gate.</span> The guidance is present, not imposed.</p>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Tension · Pretty mockups vs. the states that actually ship</div>
+          <h3>Complete state coverage as a first-class deliverable</h3>
+          <p>Enterprise selfcare breaks in the unhappy states — pending, error, partial data, account on hold — and those are exactly what a per-brand fork would get wrong inconsistently. I treated empty, loading, error, and edge states as part of the component spec, not an afterthought, so every brand inherits correct behaviour by default. This is the least glamorous decision and the one that most protects consistency at scale.</p>
+        </div>
+      </section>
+
+      <section class="cs-section reveal" id="design-work">
+        <h2>Design work</h2>
+        <p>A walk through the system: the themeable home, the same flow rendered in two brand themes, the onboarding scaffold, and the state coverage that keeps brands honest.</p>
+        <div class="cs-figure"><span class="ph">[ IMAGE — task-first home, brand A ]</span></div>
+        <div class="cs-figure"><span class="ph">[ IMAGE — same home, brand B theme — proving the shared structure ]</span></div>
+        <div class="cs-figure"><span class="ph">[ IMAGE — guided onboarding + contextual quick actions ]</span></div>
+        <div class="cs-figure"><span class="ph">[ IMAGE — component states: loading / empty / error / pending ]</span></div>
+      </section>
+
+      <section class="cs-section reveal" id="reflection">
+        <h2>Reflection</h2>
+        <p>What I'd carry forward: defining the shared-vs-brand split early gave every later decision a clear test — "is this behaviour or expression?" — and that's what kept scope from sprawling.</p>
+        <p><b>What didn't work / what I'd change:</b> I waited too long on a couple of decisions hoping for cleaner data that never fully arrived. The lesson I took: in a multi-brand build, don't wait for perfect data to commit to the structural decisions — make the call on the strongest evidence you have, ship it behind the system, and let real usage refine the edges. Perfect data is usually just a slower way to learn the same thing.</p>
+        <div class="kv">
+          <div class="kv__row"><dt>Methods</dt><dd>Contextual inquiry · usability testing · affinity mapping · workflow audit</dd></div>
+          <div class="kv__row"><dt>Shipped</dt><dd>Themeable selfcare platform, shared component &amp; state system, onboarding flow</dd></div>
+          <div class="kv__row"><dt>Timeline</dt><dd>9 months, 2025</dd></div>
+        </div>
+      </section>
+
+      <nav class="cs-nav-foot" aria-label="More work">
+        <a href="index.html">← All work</a>
+        <a href="case-study-safexpress.html">Next: Safexpress →</a>
+      </nav>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <p class="footer__cta">Have a complex product that needs sorting out? <a href="mailto:karpagameenalm@gmail.com">Let's talk →</a></p>
+      <div class="footer__links">
+        <a href="mailto:karpagameenalm@gmail.com">Email <span class="ext">↗</span></a>
+        <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn <span class="ext">↗</span></a>
+        <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub <span class="ext">↗</span></a>
+        <a href="Karpaga_Meenal_Resume_2026.pdf" download>Resume <span class="ext">↓</span></a>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© <span data-year>2026</span> Karpaga Meenal</span>
+      <span>Senior Product &amp; UX Designer · Chennai</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

@@ -156,7 +156,7 @@
   var twEl = document.getElementById("hero-typewriter");
   if (twEl) {
     var twLines = [
-      "I design the complicated screens enterprises can't afford to get wrong.",
+      "Designing screens enterprises can't afford to get wrong.",
       "Turning complex flows into clarity — from research to ship.",
       "Research-led UX for regulated, high-stakes products."
     ];

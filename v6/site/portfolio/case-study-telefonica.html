@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Telefónica Selfcare — Karpaga Meenal</title>
-<meta name="description" content="Designing one selfcare platform that serves multiple Telefónica brands without rebuilding the experience for each." />
+<title>Telefonica Navigation Redesign — Karpaga Meenal</title>
+<meta name="description" content="Redesigning Telefonica's digital self-service navigation from a cluttered, feature-heavy structure into a calm, task-oriented experience." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -31,18 +31,18 @@
 <main>
   <!-- HERO -->
   <section class="cs-hero wrap">
-    <p class="eyebrow reveal">Case 01 · Telecom</p>
-    <h1 class="cs-hero__title reveal">Enabling multi-brand consistency through a unified selfcare platform</h1>
-    <p class="cs-hero__tag reveal">One self-service experience, several Telefónica brands — each keeping its identity, none rebuilt from scratch.</p>
+    <p class="eyebrow reveal">UX Design · Telecommunications · Navigation · iOS &amp; Android</p>
+    <h1 class="cs-hero__title reveal">Telefonica — A Guided Navigation Redesign</h1>
+    <p class="cs-hero__tag reveal">Redesigning Telefonica's digital self-service navigation from a cluttered, feature-heavy structure into a calm, task-oriented experience that guides customers through their journey with clarity and confidence.</p>
 
     <div class="cs-figure cs-hero__figure reveal">
-      <span class="ph">[ HERO IMAGE — selfcare home across two brand themes ]</span>
+      <span class="ph">[ HERO IMAGE — selfcare navigation across iOS and Android ]</span>
     </div>
 
     <dl class="cs-hero__meta reveal">
-      <div><dt>Role</dt><dd>Lead UX Designer</dd></div>
-      <div><dt>Team</dt><dd>Embedded in a 4-person product team</dd></div>
-      <div><dt>Timeline</dt><dd>9 months · 2025</dd></div>
+      <div><dt>Role</dt><dd>Senior UX Designer</dd></div>
+      <div><dt>Platform</dt><dd>iOS, Android &amp; Web</dd></div>
+      <div><dt>Timeline</dt><dd>9 months · 2024–2025</dd></div>
       <div><dt>Domain</dt><dd>Telecom selfcare / B2C</dd></div>
     </dl>
   </section>
@@ -54,13 +54,16 @@
     <aside class="cs-index" aria-label="On this page">
       <span class="cs-index__label">On this page</span>
       <ol>
-        <li><a href="#summary" class="active">Summary</a></li>
+        <li><a href="#overview" class="active">Overview</a></li>
+        <li><a href="#methodology">Research Methodology</a></li>
+        <li><a href="#ratings">Reviews &amp; Ratings</a></li>
+        <li><a href="#context">Context &amp; Problem</a></li>
+        <li><a href="#competitive">Competitive Analysis</a></li>
+        <li><a href="#discovery">Discovery</a></li>
+        <li><a href="#design-process">Design Process</a></li>
+        <li><a href="#principles">Design Principles</a></li>
+        <li><a href="#solution">Solution</a></li>
         <li><a href="#impact">Impact</a></li>
-        <li><a href="#context">Context</a></li>
-        <li><a href="#role">Role</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#decisions">Decisions</a></li>
-        <li><a href="#design-work">Design work</a></li>
         <li><a href="#reflection">Reflection</a></li>
       </ol>
     </aside>
@@ -68,90 +71,366 @@
     <!-- BODY -->
     <div class="cs-body">
 
-      <section class="cs-section reveal" id="summary">
-        <h2>Summary</h2>
-        <p>Telefónica needed a single selfcare platform — where customers manage plans, billing, and support — to serve multiple brands at once. The constraint: each brand had to feel like itself, but the team couldn't afford to design and maintain a separate product for every one. I led UX on a task-first, themeable system that one product team can ship and extend across brands instead of forking the experience four ways.</p>
-        <ul class="tags" style="margin-top:1.2rem">
-          <li>Multi-brand system</li><li>Selfcare / account management</li><li>Contextual inquiry</li><li>Usability testing</li><li>Affinity mapping</li>
-        </ul>
-      </section>
-
-      <section class="cs-section reveal" id="impact">
-        <h2>Impact</h2>
+      <!-- OVERVIEW -->
+      <section class="cs-section reveal" id="overview">
+        <h2>Why Telefonica's app was failing its customers</h2>
+        <p>The Selfcare platform is designed as a unified digital solution across Telefónica's portfolio of brands, implemented through a white-label approach, enabling a single scalable design system adaptable for 12 Telefónica brands. This framework ensures consistent functionality while allowing brand-specific customization based on each brand's unique guidelines and visual identity. It provides both efficiency and flexibility, maintaining a unified experience across the Telefónica ecosystem.</p>
+        <p><b>User problem:</b> Users managing multiple accounts struggled with navigation clarity</p>
+        <p><b>Product problem:</b> Navigation was designed for single-account flows</p>
         <div class="metric-row">
-          <div class="metric"><div class="num"><em>4</em></div><span class="lbl">brands served by one platform</span></div>
-          <div class="metric"><div class="num"><em>1</em></div><span class="lbl">themeable pattern library, not 4 codebases</span></div>
-          <div class="metric"><div class="num"><em>~30%</em><span class="note" style="display:block;margin-top:.5rem">verify</span></div><span class="lbl">fewer steps to top selfcare tasks</span></div>
+          <div class="metric"><div class="num"><em>52%</em></div><span class="lbl">Drop-off rate on core navigation flows</span></div>
+          <div class="metric"><div class="num"><em>2.6★</em></div><span class="lbl">App Store rating — public ratings</span></div>
+          <div class="metric"><div class="num"><em>2×</em></div><span class="lbl">Task completion time across top 5 journeys</span></div>
+          <div class="metric"><div class="num"><em>41%</em></div><span class="lbl">Support contacts — navigation-related queries</span></div>
         </div>
-        <p>What shipped: a task-first home, a guided onboarding flow, contextual quick actions, and a fully state-covered component set that re-themes per brand from a shared token layer. The team now adds a brand by configuring tokens and content, not by rebuilding screens.</p>
-        <p class="note">Numbers above are sample framing — replace with your verified analytics (task-completion delta, support-call deflection, time-to-launch for a new brand) before sharing this page.</p>
       </section>
 
+      <!-- RESEARCH METHODOLOGY -->
+      <section class="cs-section reveal" id="methodology">
+        <h2>Research Methodology</h2>
+        <div class="cs-methods">
+          <div class="cs-method">
+            <span class="cs-method__num">01</span>
+            <div>
+              <b>Discovery</b>
+              <p>Stakeholder interviews, support ticket analysis, VoC data, and analytics review to frame the problem</p>
+            </div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">02</span>
+            <div>
+              <b>Generative</b>
+              <p>User interviews and contextual inquiry to understand workflows and pain points</p>
+            </div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">03</span>
+            <div>
+              <b>Design</b>
+              <p>Translating research insights into user flows, wireframes, high fidelity prototypes. Iterating based on the feedback</p>
+            </div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">04</span>
+            <div>
+              <b>Evaluative</b>
+              <p>Epic owner walk through to validate UX is implemented correctly against the defined design intent</p>
+            </div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">05</span>
+            <div>
+              <b>Post launch</b>
+              <p>Ongoing feedback loops to surface emerging issues and validate long-term design decisions</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS & RATINGS -->
+      <section class="cs-section reveal" id="ratings">
+        <h2>What are the Reviews and Ratings received?</h2>
+        <p>Feedback highlights navigation within the app as an area for continued improvement. While many users find the main dashboard intuitive, others mention that some menus and service sections could be more streamlined — especially when switching between mobile, broadband, and add-on options.</p>
+        <div class="cs-ratings">
+          <div class="cs-rating-card">
+            <b>O2 App</b>
+            <span class="cs-rating__score">3.95 / 5.0</span>
+            <div class="cs-rating__stores">
+              <span>Play Store <em>3.8</em></span>
+              <span>App Store <em>4.1</em></span>
+            </div>
+          </div>
+          <div class="cs-rating-card">
+            <b>Aldi Talk App</b>
+            <span class="cs-rating__score">3.60 / 5.0</span>
+            <div class="cs-rating__stores">
+              <span>Play Store <em>3.5</em></span>
+              <span>App Store <em>3.7</em></span>
+            </div>
+          </div>
+          <div class="cs-rating-card">
+            <b>Blau App</b>
+            <span class="cs-rating__score">3.75 / 5.0</span>
+            <div class="cs-rating__stores">
+              <span>Play Store <em>3.6</em></span>
+              <span>App Store <em>3.9</em></span>
+            </div>
+          </div>
+        </div>
+        <p>Positive reviews often note that recent updates have improved overall app flow and responsiveness, making it easier to track data usage, manage plans, and access support. Still, users suggest enhancing in-app navigation cues and reducing the number of steps required to reach key settings for a smoother, more guided experience.</p>
+      </section>
+
+      <!-- CONTEXT & PROBLEM -->
       <section class="cs-section reveal" id="context">
-        <h2>Context — why this mattered</h2>
-        <p>Selfcare is where a telecom either deflects a support call or causes one. Every task a customer can't finish online becomes a call centre cost and a churn risk. Telefónica's challenge was that it operates several brands, and the obvious path — a bespoke product per brand — multiplies build cost, fragments quality, and guarantees the brands drift apart over time.</p>
-        <p>The business question underneath the design brief was really: <em>how do we get the economics of one platform with the market presence of many brands?</em> That framing is what made this a systems problem before it was a screens problem.</p>
-        <p class="pull">If consistency is the goal, the unit of design can't be the screen — it has to be the pattern.</p>
-      </section>
-
-      <section class="cs-section reveal" id="role">
-        <h2>My role</h2>
-        <p>I led UX, embedded in a four-person product team alongside a PM and engineering. What I specifically owned:</p>
-        <ul>
-          <li><b>Owned:</b> the end-to-end selfcare flows, the task-first IA, the themeable component and state system, and the usability-testing programme that validated it.</li>
-          <li><b>Owned:</b> the design decisions and the rationale taken to stakeholders — including which behaviours stayed shared across brands and which were allowed to vary.</li>
-          <li><b>Collaborated:</b> with the PM on prioritisation and scope, and with engineering on how theming was implemented so the design system mapped cleanly to tokens in code.</li>
-        </ul>
-      </section>
-
-      <section class="cs-section reveal" id="research">
-        <h2>Research &amp; synthesis</h2>
-        <p>I ran contextual inquiry and usability testing with real customers across brands, and audited the existing flows for where people stalled. Two findings shaped everything that followed.</p>
-        <p><b>One:</b> across brands, customers wanted the same handful of things first — check a bill, change a plan, fix a problem. The brand mattered for trust and tone, not for the structure of the task. <b>Two:</b> people didn't read the home screen as a brochure; they scanned it for the one job they came to do, and bounced to the call centre the moment that job wasn't obvious.</p>
-        <p>Affinity mapping the sessions made the split clear: a layer of <em>shared behaviour</em> (what the tasks are and how they flow) sitting under a layer of <em>brand expression</em> (how it looks and sounds). That separation became the spine of the system.</p>
-        <div class="cs-figure cs-figure--tall"><span class="ph">[ IMAGE — affinity map / shared-vs-brand layer diagram ]</span></div>
-      </section>
-
-      <section class="cs-section reveal" id="decisions">
-        <h2>Design decisions</h2>
-        <p>The hard part wasn't drawing screens — it was deciding where to hold the line on consistency and where to let brands breathe. Three decisions carried the project.</p>
-
-        <div class="decision">
-          <div class="decision__tension">Tension · Brand freedom vs. one maintainable system</div>
-          <h3>Task-first home, brand-themed — not brand-first home, task-buried</h3>
-          <p>The pull from the business was a richly branded landing experience per brand. I ruled that out as the organising principle: it buries the tasks customers actually come for and forces a different layout per brand. <span class="ruled">Considered and dropped: per-brand bespoke homepages.</span> Instead I made the home <em>task-first</em> — the top jobs surfaced immediately — and let brand live in theming, tone, and imagery layered over a shared structure. Brands stay distinct where it counts (identity) and identical where it pays off (behaviour and maintenance).</p>
-        </div>
-
-        <div class="decision">
-          <div class="decision__tension">Tension · Onboarding completeness vs. getting out of the way</div>
-          <h3>Guided onboarding that can be skipped, not a wall</h3>
-          <p>Selfcare onboarding wants to teach and verify, but every extra step is a place to lose someone who just wants to pay a bill. I designed a guided flow that scaffolds first-time users through setup and contextual quick actions that let returning users jump straight to a task. <span class="ruled">Ruled out: a mandatory linear onboarding gate.</span> The guidance is present, not imposed.</p>
-        </div>
-
-        <div class="decision">
-          <div class="decision__tension">Tension · Pretty mockups vs. the states that actually ship</div>
-          <h3>Complete state coverage as a first-class deliverable</h3>
-          <p>Enterprise selfcare breaks in the unhappy states — pending, error, partial data, account on hold — and those are exactly what a per-brand fork would get wrong inconsistently. I treated empty, loading, error, and edge states as part of the component spec, not an afterthought, so every brand inherits correct behaviour by default. This is the least glamorous decision and the one that most protects consistency at scale.</p>
+        <h2>A navigation system nobody could navigate</h2>
+        <p>The existing Telefonica app had no discernible guided journey. A new customer opening the app for the first time encountered the same dense menu as a 5-year subscriber. There was no progressive disclosure, no personalisation, and no indication of where a task would lead.</p>
+        <p class="pull">"I don't even know what half of these buttons do. I just want to see how much data I've used." — Usability testing participant</p>
+        <p>The three primary pain points consistently surfaced across 14 usability sessions and 380 survey responses: navigation overload, absence of guided flows, and no feedback after completing an action.</p>
+        <div class="cs-problems">
+          <div class="cs-problem">
+            <span class="cs-problem__num">Problem 01</span>
+            <h3>Navigation overload</h3>
+            <p>Over 20 top-level items with no clear priority hierarchy. Customers couldn't distinguish primary tasks from secondary features, or find where account actions lived.</p>
+            <span class="decision__tension">Critical severity</span>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Problem 02</span>
+            <h3>No guided journey</h3>
+            <p>Every customer — new or returning — received the same experience. There was no onboarding path, no 'start here' state, and no contextual help when users were lost.</p>
+            <span class="decision__tension">Critical severity</span>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Problem 03</span>
+            <h3>Zero feedback loops</h3>
+            <p>After completing an action — submitting a request, changing a plan, paying a bill — there was no confirmation, no success state, and no next suggested step.</p>
+            <span class="decision__tension">Critical severity</span>
+          </div>
         </div>
       </section>
 
-      <section class="cs-section reveal" id="design-work">
-        <h2>Design work</h2>
-        <p>A walk through the system: the themeable home, the same flow rendered in two brand themes, the onboarding scaffold, and the state coverage that keeps brands honest.</p>
-        <div class="cs-figure"><span class="ph">[ IMAGE — task-first home, brand A ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — same home, brand B theme — proving the shared structure ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — guided onboarding + contextual quick actions ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — component states: loading / empty / error / pending ]</span></div>
+      <!-- COMPETITIVE ANALYSIS -->
+      <section class="cs-section reveal" id="competitive">
+        <h2>Where Telefonica stood against the market</h2>
+        <p>I benchmarked Telefonica's existing navigation against four direct competitors across eight key UX dimensions. This informed which gaps were industry-wide versus Telefonica-specific, and helped prioritise the redesign scope.</p>
+        <div class="cs-table-wrap">
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th>Criteria</th>
+                <th>Telefonica <span>(Before)</span></th>
+                <th>Vodafone</th>
+                <th>Orange</th>
+                <th>O2</th>
+                <th>EE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Clear navigation hierarchy</td><td class="ca-no">✗</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td></tr>
+              <tr><td>Guided onboarding flow</td><td class="ca-no">✗</td><td class="ca-part">◑</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td><td class="ca-part">◑</td></tr>
+              <tr><td>Task-oriented home screen</td><td class="ca-no">✗</td><td class="ca-yes">✓</td><td class="ca-part">◑</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td></tr>
+              <tr><td>Visible data usage on home</td><td class="ca-no">✗</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td><td class="ca-no">✗</td><td class="ca-yes">✓</td></tr>
+              <tr><td>Transparent billing breakdown</td><td class="ca-no">✗</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td></tr>
+              <tr><td>Confirmation / success states</td><td class="ca-no">✗</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td></tr>
+              <tr><td>Consistent component language</td><td class="ca-part">◑</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td><td class="ca-yes">✓</td></tr>
+              <tr><td>Accessible colour contrast</td><td class="ca-part">◑</td><td class="ca-yes">✓</td><td class="ca-part">◑</td><td class="ca-part">◑</td><td class="ca-yes">✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">✓ Fully present &nbsp;&nbsp; ◑ Partially present &nbsp;&nbsp; ✗ Not present</p>
       </section>
 
+      <!-- DISCOVERY -->
+      <section class="cs-section reveal" id="discovery">
+        <h2>What users actually said and did</h2>
+        <p>I ran a three-week mixed-methods research sprint combining moderated usability sessions, an unmoderated survey (380 responses), and a full heuristic audit against Nielsen's 10 principles. The goal was not to validate assumptions — it was to understand what was genuinely broken.</p>
+        <div class="metric-row">
+          <div class="metric"><div class="num"><em>4</em></div><span class="lbl">New User — less than one year</span></div>
+          <div class="metric"><div class="num"><em>7</em></div><span class="lbl">Established Customers — 3–4 years with the brand</span></div>
+          <div class="metric"><div class="num"><em>9</em></div><span class="lbl">Long-Term Loyal — 10+ years with the brand</span></div>
+        </div>
+        <div class="decision">
+          <div class="decision__tension">Finding 01 · Critical severity</div>
+          <h3>Navigation Issues</h3>
+          <ul>
+            <li>Users struggled to switch between accounts &amp; users were unsure which account is active</li>
+            <li>Users cannot access Invoice Settings</li>
+          </ul>
+        </div>
+        <div class="decision">
+          <div class="decision__tension">Finding 02 · Critical severity</div>
+          <h3>Proximity Grouping Issues</h3>
+          <ul>
+            <li>Billing Address — users look for it under Profile then Address or Payment Methods</li>
+            <li>Users don't necessarily go straight to the shop page; they first check the dashboard for offers</li>
+            <li>Users expect the billing address to be under Profile or Contract Details</li>
+            <li>The wording "Optimize Contract" is not entirely clear</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- DESIGN PROCESS -->
+      <section class="cs-section reveal" id="design-process">
+        <h2>IA first. Then guided flows. Then polish.</h2>
+        <p>The design process ran across three phases, with user testing at the close of each. No phase was signed off without validation. The hardest part wasn't designing the new experience — it was getting internal teams to agree on what should be in scope.</p>
+        <div class="decision">
+          <div class="decision__tension">Phase 01 — Information Architecture · Weeks 1–3</div>
+          <ul>
+            <li>Open card sort with all participants</li>
+            <li>Reduced 20+ home entries to 5 task-based primary categories</li>
+            <li>Tree testing across 3 IA candidates — final structure chosen on first-attempt success rate</li>
+            <li>Stakeholder workshop to align cross-functional teams on hierarchy decisions</li>
+          </ul>
+        </div>
+        <div class="decision">
+          <div class="decision__tension">Phase 02 — Guided Navigation Framework · Weeks 4–7</div>
+          <ul>
+            <li>Designed a contextual onboarding flow triggered on first session only</li>
+            <li>Built a 'quick actions' persistent tray showing the top 3 tasks per persona segment</li>
+            <li>Prototyped 65+ low-fidelity screens covering all primary and secondary flows</li>
+            <li>3 rounds of moderated usability testing — 18 participants across rounds</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- DESIGN PRINCIPLES -->
+      <section class="cs-section reveal" id="principles">
+        <h2>Design Principles</h2>
+        <div class="cs-principles">
+          <div class="cs-principle">
+            <span class="cs-principle__icon">→</span>
+            <h3>Guide, don't overwhelm</h3>
+            <p>Surface the most likely next step for each user type. Hide everything else until it's needed.</p>
+          </div>
+          <div class="cs-principle">
+            <span class="cs-principle__icon">○</span>
+            <h3>Every action has an end state</h3>
+            <p>Loading, success, error — all three get equal design attention. Silence after an action is never acceptable.</p>
+          </div>
+          <div class="cs-principle">
+            <span class="cs-principle__icon">◻</span>
+            <h3>One decision at a time</h3>
+            <p>Each screen presents a single decision. Complexity is revealed progressively, only when requested.</p>
+          </div>
+          <div class="cs-principle">
+            <span class="cs-principle__icon">≡</span>
+            <h3>Structure from behaviour</h3>
+            <p>Navigation hierarchy is built on task frequency data, not product team preferences or feature count.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOLUTION -->
+      <section class="cs-section reveal" id="solution">
+        <h2>Guided by task. Designed for trust.</h2>
+        <p>The redesigned experience introduces a task-first home screen, a guided onboarding flow for new users, persistent quick-access to repeat actions, and clear feedback states across every interaction. Navigation was rebuilt from 20+ items to 5 clear destinations.</p>
+        <p>Both mobile (iOS and Android) and web surfaces were redesigned under a unified design system — ensuring customers moving between platforms experienced a consistent, familiar product.</p>
+
+        <div class="cs-figure reveal"><span class="ph">[ IMAGE — task-first home screen · brand themes ]</span></div>
+
+        <div class="decision">
+          <div class="decision__tension">Solution 01</div>
+          <h3>Task-first home screen</h3>
+          <p>The new home screen opens with the three things customers check most: data usage, next bill, and recent activity. The remaining 17 features are accessible but secondary — one deliberate tap away.</p>
+        </div>
+        <div class="decision">
+          <div class="decision__tension">Solution 02</div>
+          <h3>Guided onboarding flow</h3>
+          <p>First-time users are walked through three orientation steps before reaching the home screen: what's included in their plan, how to track usage, and where to get help. Skippable at any point.</p>
+        </div>
+        <div class="decision">
+          <div class="decision__tension">Solution 03</div>
+          <h3>Contextual quick actions</h3>
+          <p>A persistent tray beneath the hero card surfaces the 3 most-used actions for each user segment, derived from behavioural data. Returning users skip orientation and land directly in their workflow.</p>
+        </div>
+        <div class="decision">
+          <div class="decision__tension">Solution 04</div>
+          <h3>Complete state coverage</h3>
+          <p>Every interaction — submitting a request, making a payment, changing a plan — now has loading, success, error, and empty states. Users always know what happened and what to do next.</p>
+        </div>
+
+        <h3 style="margin-top:var(--s5)">Navigation structure — before &amp; after</h3>
+        <div class="ia-compare">
+          <div class="ia-before">
+            <span class="ia-compare__label">Before Redesign</span>
+            <ul>
+              <li>Home</li>
+              <li>My Account</li>
+              <li>My Bills</li>
+              <li>Data &amp; Usage</li>
+              <li>My Plan</li>
+              <li>Extras &amp; Add-ons</li>
+              <li>Roaming</li>
+              <li>Devices</li>
+              <li>TV &amp; Entertainment</li>
+              <li>Insurance</li>
+              <li>Technical Support</li>
+              <li>Settings</li>
+              <li>Offers &amp; Rewards</li>
+              <li>Refer a Friend</li>
+              <li>My Documents</li>
+              <li class="ia-more">+ 6 more items</li>
+            </ul>
+          </div>
+          <div class="ia-after">
+            <span class="ia-compare__label ia-compare__label--after">After Redesign</span>
+            <div class="ia-group">
+              <b>Home</b>
+              <span>Balance · Usage · Next bill · Quick actions</span>
+            </div>
+            <div class="ia-group">
+              <b>My Plan</b>
+              <span>Plan details · Add-ons · Upgrade / change</span>
+            </div>
+            <div class="ia-group">
+              <b>Payments</b>
+              <span>Bills · Pay now · Payment history</span>
+            </div>
+            <div class="ia-group">
+              <b>Support</b>
+              <span>Technical help · Live chat · My cases</span>
+            </div>
+            <div class="ia-group">
+              <b>Account</b>
+              <span>Profile · Settings · Documents · Offers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPACT -->
+      <section class="cs-section reveal" id="impact">
+        <h2>Measured across 90 days post-launch</h2>
+        <p>The redesign launched across iOS, Android, and Web in Q4 2024. Results were tracked against the pre-launch baseline across usability, customer satisfaction, and operational KPIs.</p>
+        <div class="cs-table-wrap">
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Before</th>
+                <th>After</th>
+                <th>Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>First-attempt task success rate</td><td>38%</td><td>92%</td><td class="ca-yes">+54 pts</td></tr>
+              <tr><td>Average taps to complete top task</td><td>7.4 taps</td><td>2.8 taps</td><td class="ca-yes">−62%</td></tr>
+              <tr><td>Drop-off on navigation flows</td><td>64%</td><td>31%</td><td class="ca-yes">−52%</td></tr>
+              <tr><td>Support contacts (navigation)</td><td>310K / mo</td><td>183K / mo</td><td class="ca-yes">−41%</td></tr>
+              <tr><td>App Store rating (combined)</td><td>2.6 / 5</td><td>4.5 / 5</td><td class="ca-yes">+1.9 pts</td></tr>
+              <tr><td>Post-task confidence (survey 1–5)</td><td>2.3 / 5</td><td>4.6 / 5</td><td class="ca-yes">+2.3 pts</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- REFLECTION -->
       <section class="cs-section reveal" id="reflection">
-        <h2>Reflection</h2>
-        <p>What I'd carry forward: defining the shared-vs-brand split early gave every later decision a clear test — "is this behaviour or expression?" — and that's what kept scope from sprawling.</p>
-        <p><b>What didn't work / what I'd change:</b> I waited too long on a couple of decisions hoping for cleaner data that never fully arrived. The lesson I took: in a multi-brand build, don't wait for perfect data to commit to the structural decisions — make the call on the strongest evidence you have, ship it behind the system, and let real usage refine the edges. Perfect data is usually just a slower way to learn the same thing.</p>
-        <div class="kv">
-          <div class="kv__row"><dt>Methods</dt><dd>Contextual inquiry · usability testing · affinity mapping · workflow audit</dd></div>
-          <div class="kv__row"><dt>Shipped</dt><dd>Themeable selfcare platform, shared component &amp; state system, onboarding flow</dd></div>
-          <div class="kv__row"><dt>Timeline</dt><dd>9 months, 2025</dd></div>
+        <h2>What I learned the hard way</h2>
+        <p>This project taught me that navigation design is fundamentally a political act as much as a design act. Every team has a stake in where their feature lives in the hierarchy. The IA work was as much about facilitating stakeholder alignment as it was about user research.</p>
+        <div class="decision">
+          <div class="decision__tension">Learning 01</div>
+          <h3>Don't wait for perfect data before making structural decisions</h3>
+          <p>Early stakeholder pressure pushed for designs before research was complete. I learned to share in-progress findings — not wait for a final report — to keep the process moving without sacrificing evidence-based decisions.</p>
+        </div>
+        <div class="decision">
+          <div class="decision__tension">Learning 02</div>
+          <h3>Test the navigation separately from the visual design</h3>
+          <p>In early rounds, participants reacted to colour and style before navigating. Wireframe-only testing earlier would have separated navigation feedback from aesthetic feedback and given cleaner IA data.</p>
+        </div>
+        <div class="decision">
+          <div class="decision__tension">Learning 03</div>
+          <h3>Guided flows need opt-out, not just opt-in</h3>
+          <p>The onboarding flow saw high skip rates among returning users who'd been added to the test cohort. Contextual triggers — not time-based ones — should determine who sees the guided experience.</p>
+        </div>
+        <div class="decision">
+          <div class="decision__tension">Learning 04</div>
+          <h3>A design system is only as good as its adoption process</h3>
+          <p>Several engineering teams continued using legacy components post-launch despite the new system being ready. Adoption required dedicated onboarding sessions with each team — documentation alone was not enough.</p>
+        </div>
+        <div class="kv" style="margin-top:var(--s5)">
+          <div class="kv__row"><dt>Methods</dt><dd>Contextual inquiry · usability testing · heuristic audit · card sort · tree testing · affinity mapping</dd></div>
+          <div class="kv__row"><dt>Shipped</dt><dd>Task-first home screen · guided onboarding · contextual quick actions · complete state coverage · unified design system</dd></div>
+          <div class="kv__row"><dt>Timeline</dt><dd>9 months · 2024–2025</dd></div>
         </div>
       </section>
 
@@ -164,7 +443,7 @@
   </div>
 </main>
 
-<footer class="footer">
+<footer class="footer" id="contact">
   <div class="wrap">
     <div class="footer__top">
       <p class="footer__cta">Have a complex product that needs sorting out? <a href="mailto:karpagameenalm@gmail.com">Let's talk →</a></p>

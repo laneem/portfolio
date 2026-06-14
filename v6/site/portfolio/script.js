@@ -151,4 +151,39 @@
   /* ---------- 5. FOOTER YEAR ------------------------------------- */
   var y = document.querySelector("[data-year]");
   if (y) y.textContent = new Date().getFullYear();
+
+  /* ---------- 6. HERO TYPEWRITER --------------------------------- */
+  var twEl = document.getElementById("hero-typewriter");
+  if (twEl) {
+    var twLines = [
+      "I design the complicated screens enterprises can't afford to get wrong.",
+      "Turning complex flows into clarity — from research to ship.",
+      "Research-led UX for regulated, high-stakes products."
+    ];
+    var twIdx = 0, twChar = 0, twDeleting = false;
+
+    function twTick() {
+      var line = twLines[twIdx];
+      if (twDeleting) {
+        twEl.textContent = line.slice(0, --twChar);
+      } else {
+        twEl.textContent = line.slice(0, ++twChar);
+      }
+      if (!twDeleting && twChar === line.length) {
+        return setTimeout(function () { twDeleting = true; twTick(); }, 2200);
+      }
+      if (twDeleting && twChar === 0) {
+        twDeleting = false;
+        twIdx = (twIdx + 1) % twLines.length;
+        return setTimeout(twTick, 500);
+      }
+      setTimeout(twTick, twDeleting ? 28 : 52);
+    }
+
+    if (reduceMotion) {
+      twEl.textContent = twLines[0];
+    } else {
+      setTimeout(twTick, 900);
+    }
+  }
 })();

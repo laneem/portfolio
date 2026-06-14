@@ -7,7 +7,7 @@
 <meta name="description" content="Karpaga Meenal — Senior UX/Product designer for regulated, complex enterprise products across banking, healthcare, logistics, and telecom." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Gochi+Hand&family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -34,8 +34,21 @@
   <section class="hero hero--split wrap">
     <div class="hero__text">
       <p class="eyebrow reveal">Senior Product &amp; UX Designer · 8 yrs</p>
-      <h1 class="hero__title reveal">I design the <span class="accent">complicated</span> screens enterprises can't afford to get wrong.</h1>
-      <p class="hero__pos reveal">Banking, clinical trials, logistics ops, telecom — regulated domains where a confusing flow has real consequences. I work end-to-end: discovery, systems, and the judgement calls in between, embedded with product and engineering rather than handing off mockups.</p>
+      <h1 class="hero__name reveal">
+        <span class="hero__greeting">Hi, I'm</span>
+        <span class="hero__fullname">Karpaga <span class="accent">Meenal</span></span>
+      </h1>
+      <p class="hero__tagline reveal"><span id="hero-typewriter"></span></p>
+      <p class="hero__pos reveal">
+        <svg class="hero__pos-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M5 10h10M10 5v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="11" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="2" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="11" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+        <span>Banking, clinical trials, logistics, telecom — regulated domains where confusing flows have real consequences. I work end-to-end: research, systems, and the judgment calls in between.</span>
+      </p>
       <div class="hero__meta reveal">
         <span>Enterprise SaaS &amp; B2B</span>
         <span>Research → Systems → Ship</span>
@@ -47,7 +60,13 @@
       </div>
     </div>
     <div class="hero__portrait reveal">
-      <img src="meenal-cover.png" alt="Karpaga Meenal, Senior Product & UX Designer" />
+      <div class="hero__portrait-frame">
+        <img src="meenal-cover.png" alt="Karpaga Meenal, Senior Product & UX Designer" />
+      </div>
+      <div class="hero__wave" role="img" aria-label="Waving hello">
+        👋
+        <span class="hero__wave-tip">Hi there! I'm Meenal, welcome to my project works.</span>
+      </div>
     </div>
   </section>
 
@@ -61,58 +80,78 @@
     <div class="cases">
 
       <a class="case-card reveal" href="case-study-telefonica.html">
-        <span class="case-card__idx">01</span>
-        <div>
-          <h3 class="case-card__name">Telefónica Selfcare <span class="dom">Telecom</span></h3>
-          <p class="case-card__prob">One self-service platform serving multiple O2 / Telefónica brands, each with its own identity — without rebuilding the experience four times over.</p>
-          <div class="case-card__foot">
-            <span><b>Role</b> Lead UX, 4-person product team</span>
-            <span><b>Year</b> 2025</span>
+        <div class="case-card__body">
+          <span class="case-card__idx">01</span>
+          <div>
+            <h3 class="case-card__name">Telefónica Selfcare <span class="dom">Telecom</span></h3>
+            <p class="case-card__prob">One self-service platform serving multiple O2 / Telefónica brands, each with its own identity — without rebuilding the experience four times over.</p>
+            <div class="case-card__foot">
+              <span><b>Role</b> Lead UX, 4-person product team</span>
+              <span><b>Year</b> 2025</span>
+            </div>
           </div>
+          <div class="case-card__metric"><span class="num">4</span><span class="lbl">brands, one system</span></div>
         </div>
-        <div class="case-card__metric"><span class="num">4</span><span class="lbl">brands, one system</span></div>
+        <div class="case-card__cover case-card__cover--telefonica">
+          <img src="cover-telefonica.png" alt="Telefónica Selfcare app mockup" loading="lazy" />
+        </div>
         <span class="case-card__go">↗</span>
       </a>
 
       <a class="case-card reveal" href="case-study-safexpress.html">
-        <span class="case-card__idx">02</span>
-        <div>
-          <h3 class="case-card__name">Safexpress Inbound Unloading <span class="dom">Logistics</span></h3>
-          <p class="case-card__prob">Dock unloading was the hidden bottleneck slowing every downstream operation — designed for warehouse staff working fast, on the floor, not at a desk.</p>
-          <div class="case-card__foot">
-            <span><b>Role</b> Solo UX, 6-person team</span>
-            <span><b>Year</b> 2024</span>
+        <div class="case-card__body">
+          <span class="case-card__idx">02</span>
+          <div>
+            <h3 class="case-card__name">Safexpress Inbound Unloading <span class="dom">Logistics</span></h3>
+            <p class="case-card__prob">Dock unloading was the hidden bottleneck slowing every downstream operation — designed for warehouse staff working fast, on the floor, not at a desk.</p>
+            <div class="case-card__foot">
+              <span><b>Role</b> Solo UX, 6-person team</span>
+              <span><b>Year</b> 2024</span>
+            </div>
           </div>
+          <div class="case-card__metric"><span class="num">35%</span><span class="lbl">faster turnaround*</span></div>
         </div>
-        <div class="case-card__metric"><span class="num">35%</span><span class="lbl">faster turnaround*</span></div>
+        <div class="case-card__cover case-card__cover--safexpress">
+          <img src="cover-safexpress.png" alt="Safexpress inbound dashboard mockup" loading="lazy" />
+        </div>
         <span class="case-card__go">↗</span>
       </a>
 
       <a class="case-card reveal" href="case-study-sbi-yono.html">
-        <span class="case-card__idx">03</span>
-        <div>
-          <h3 class="case-card__name">SBI YONO Business — RBAC <span class="dom">Banking</span></h3>
-          <p class="case-card__prob">Role-based access and user administration for enterprise banking — where one wrong permission is a compliance risk, not a UX nitpick.</p>
-          <div class="case-card__foot">
-            <span><b>Role</b> Solo UX, 6-person team</span>
-            <span><b>Year</b> 2026</span>
+        <div class="case-card__body">
+          <span class="case-card__idx">03</span>
+          <div>
+            <h3 class="case-card__name">SBI YONO Business — RBAC <span class="dom">Banking</span></h3>
+            <p class="case-card__prob">Role-based access and user administration for enterprise banking — where one wrong permission is a compliance risk, not a UX nitpick.</p>
+            <div class="case-card__foot">
+              <span><b>Role</b> Solo UX, 6-person team</span>
+              <span><b>Year</b> 2026</span>
+            </div>
           </div>
+          <div class="case-card__metric"><span class="num">30%</span><span class="lbl">faster task completion*</span></div>
         </div>
-        <div class="case-card__metric"><span class="num">30%</span><span class="lbl">faster task completion*</span></div>
+        <div class="case-card__cover case-card__cover--sbi">
+          <img src="cover-sbi.png" alt="SBI YONO RBAC dashboard mockup" loading="lazy" />
+        </div>
         <span class="case-card__go">↗</span>
       </a>
 
       <a class="case-card reveal" href="case-study-roche-rsp.html">
-        <span class="case-card__idx">04</span>
-        <div>
-          <h3 class="case-card__name">Roche RSP — Rave Support Portal <span class="dom">Healthcare</span></h3>
-          <p class="case-card__prob">A scalable clinical-trial data-entry experience for support teams, where accuracy is regulated and a misstep delays a trial.</p>
-          <div class="case-card__foot">
-            <span><b>Role</b> Solo UX, embedded</span>
-            <span><b>Year</b> 2026</span>
+        <div class="case-card__body">
+          <span class="case-card__idx">04</span>
+          <div>
+            <h3 class="case-card__name">Roche RSP — Rave Support Portal <span class="dom">Healthcare</span></h3>
+            <p class="case-card__prob">A scalable clinical-trial data-entry experience for support teams, where accuracy is regulated and a misstep delays a trial.</p>
+            <div class="case-card__foot">
+              <span><b>Role</b> Solo UX, embedded</span>
+              <span><b>Year</b> 2026</span>
+            </div>
           </div>
+          <div class="case-card__metric"><span class="num">40%</span><span class="lbl">less handoff effort*</span></div>
         </div>
-        <div class="case-card__metric"><span class="num">40%</span><span class="lbl">less handoff effort*</span></div>
+        <div class="case-card__cover case-card__cover--roche">
+          <img src="cover-roche.png" alt="Roche RSP clinical trial portal mockup" loading="lazy" />
+        </div>
         <span class="case-card__go">↗</span>
       </a>
 

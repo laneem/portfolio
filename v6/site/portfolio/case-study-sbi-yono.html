@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SBI YONO Business — RBAC — Karpaga Meenal</title>
-<meta name="description" content="Streamlining role-based access and user administration for SBI enterprise banking — where the right permission is a compliance requirement, not a nicety." />
+<title>SBI YONO Business — Profile Management — Karpaga Meenal</title>
+<meta name="description" content="Redesigning SBI YONO Business profile management from a minimal screen into a role-adaptive control center for seven distinct corporate banking user types." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -29,122 +29,280 @@
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="cs-hero wrap">
-    <p class="eyebrow reveal">Case 03 · Banking</p>
-    <h1 class="cs-hero__title reveal">Streamlining role-based access &amp; user administration for SBI enterprise banking</h1>
-    <p class="cs-hero__tag reveal">RBAC is one of the least glamorous problems in enterprise software — and one where getting it wrong is a compliance event, not a UX nitpick.</p>
+    <p class="eyebrow reveal">Case 03 · Banking · Enterprise · Profile Management</p>
+    <h1 class="cs-hero__title reveal">SBI YONO Business — Redesigning the Profile as a Control Center</h1>
+    <p class="cs-hero__tag reveal">What looked like "just a profile screen" turned out to be one of the most complex design challenges I've faced — a control center that needed to work for seven completely different types of corporate banking users.</p>
 
     <div class="cs-figure cs-hero__figure reveal">
-      <span class="ph">[ HERO IMAGE — admin console / role &amp; permission management ]</span>
+      <span class="ph">[ HERO IMAGE — SBI YONO Business profile management interface across user types ]</span>
     </div>
 
     <dl class="cs-hero__meta reveal">
-      <div><dt>Role</dt><dd>Solo UX Designer</dd></div>
-      <div><dt>Team</dt><dd>Embedded in a 6-person product team</dd></div>
-      <div><dt>Timeline</dt><dd>6 months · 2026</dd></div>
-      <div><dt>Domain</dt><dd>Enterprise banking / admin &amp; access</dd></div>
+      <div><dt>Role</dt><dd>Senior UX Designer</dd></div>
+      <div><dt>Platform</dt><dd>Web · Enterprise</dd></div>
+      <div><dt>Timeline</dt><dd>Part of larger YONO Business revamp</dd></div>
+      <div><dt>Domain</dt><dd>Enterprise banking / corporate B2B</dd></div>
     </dl>
   </section>
 
+  <!-- LAYOUT -->
   <div class="wrap cs-layout">
+
+    <!-- STICKY INDEX -->
     <aside class="cs-index" aria-label="On this page">
       <span class="cs-index__label">On this page</span>
       <ol>
-        <li><a href="#summary" class="active">Summary</a></li>
-        <li><a href="#impact">Impact</a></li>
-        <li><a href="#context">Context</a></li>
-        <li><a href="#role">Role</a></li>
+        <li><a href="#overview" class="active">Overview</a></li>
+        <li><a href="#audience">Target Audience</a></li>
         <li><a href="#research">Research</a></li>
-        <li><a href="#decisions">Decisions</a></li>
-        <li><a href="#design-work">Design work</a></li>
+        <li><a href="#approach">The Aha Moment</a></li>
+        <li><a href="#ia">Information Architecture</a></li>
+        <li><a href="#wireframes">Wireframes</a></li>
+        <li><a href="#decisions">Design Decisions</a></li>
+        <li><a href="#design">Visual Design</a></li>
+        <li><a href="#testing">Testing</a></li>
         <li><a href="#reflection">Reflection</a></li>
       </ol>
     </aside>
 
+    <!-- BODY -->
     <div class="cs-body">
 
-      <section class="cs-section reveal" id="summary">
-        <h2>Summary</h2>
-        <p>SBI's YONO Business platform needed a cleaner way to manage role-based access and user administration — who can do what, granted and revoked safely, across an enterprise's worth of users. As the solo designer on a six-person team, I designed a modular interface that adapts intelligently to whoever is logged in: shared elements stay constant, role-specific elements appear by permission. The lesson of the project: the highest-value design challenges aren't always the flashiest ones.</p>
-        <ul class="tags" style="margin-top:1.2rem">
-          <li>RBAC / access control</li><li>Admin UX</li><li>Modular system</li><li>Contextual inquiry</li><li>Usability testing</li>
-        </ul>
+      <!-- OVERVIEW -->
+      <section class="cs-section reveal" id="overview">
+        <h2>There's no such thing as "just a profile screen"</h2>
+        <p>SBI YONO Business is a unified digital platform serving corporate and business banking customers across India — handling everything from payments to trade finance to cash management, for solo entrepreneurs to large organisations.</p>
+        <p>I was brought in as part of a larger effort to revamp the entire YONO Business experience. My piece of the puzzle? <b>Profile Management.</b></p>
+        <p>The existing profile screen was minimal. Users could see their name, email, mobile number, and not much else. The task seemed simple enough — enhance the profile section, give users more control and information.</p>
+        <p class="pull">It was not simple. Not even close.</p>
+        <div class="cs-figure reveal"><span class="ph">[ IMAGE — existing minimal profile screen showing only name, email, mobile number ]</span></div>
       </section>
 
-      <section class="cs-section reveal" id="impact">
-        <h2>Impact</h2>
-        <div class="metric-row">
-          <div class="metric"><div class="num"><em>~30%</em><span class="note" style="display:block;margin-top:.5rem">verify</span></div><span class="lbl">faster admin task completion</span></div>
-          <div class="metric"><div class="num"><em>1</em></div><span class="lbl">adaptive interface, every role</span></div>
-          <div class="metric"><div class="num"><em>↓</em></div><span class="lbl">fewer mis-grants &amp; access errors</span></div>
+      <!-- TARGET AUDIENCE -->
+      <section class="cs-section reveal" id="audience">
+        <h2>Seven types of users walk into a bank…</h2>
+        <p>YONO Business doesn't just have users — it has seven distinct types, each with completely different needs, permissions, and mental models of what "their profile" even means.</p>
+        <div class="cs-methods">
+          <div class="cs-method">
+            <span class="cs-method__num">01</span>
+            <div><b>Saral User</b><p>Individual business customers with simple, self-contained needs</p></div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">02</span>
+            <div><b>Vistaar Admin</b><p>Administrators managing teams and delegating permissions across an organisation</p></div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">03</span>
+            <div><b>Transaction Users</b><p>Operators executing payments within defined authority limits</p></div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">04</span>
+            <div><b>Regulators</b><p>Senior users with oversight and approval authority at the top of the hierarchy</p></div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">05</span>
+            <div><b>Authorisers</b><p>Users who approve transactions before they are processed</p></div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">06</span>
+            <div><b>Viewers</b><p>Read-only users with visibility but no transactional authority</p></div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">07</span>
+            <div><b>Makers</b><p>Users who initiate transactions for authoriser review</p></div>
+          </div>
         </div>
-        <p>What shipped: a modular admin interface built on a clear split between common elements (shared by all roles) and role-specific elements (surfaced only when a user's permissions warrant). The interface adapts to who is logged in, so administrators see a console matched to what they're actually allowed to do.</p>
-        <p class="note">For a banking hiring manager, the evidence that lands is risk reduction — admin task time, error/mis-grant rate, support tickets on access. Replace the figures above with your verified numbers.</p>
+        <p>My job: design one profile system that works for all of them. Easy, right?</p>
+        <div class="cs-figure reveal"><span class="ph">[ IMAGE — seven user types diagram with role hierarchy ]</span></div>
+
+        <div class="decision" style="margin-top:var(--s4)">
+          <div class="decision__tension">Constraint · No access to real data</div>
+          <p>No access to analytics data — the client wasn't comfortable sharing usage data. That meant flying blind unless I talked directly to users. So I did.</p>
+        </div>
       </section>
 
-      <section class="cs-section reveal" id="context">
-        <h2>Context — why this mattered</h2>
-        <p>In enterprise banking, access control is governance. A permission granted to the wrong person isn't an inconvenience — it's an audit finding and a security exposure. But the people doing the granting are administrators under load, and an access console that's confusing produces exactly the errors it's meant to prevent. The business need was a system that makes the <em>safe</em> action also the <em>easy</em> one.</p>
-        <p class="pull">When the cost of a wrong click is compliance, clarity isn't polish — it's the control.</p>
-      </section>
-
-      <section class="cs-section reveal" id="role">
-        <h2>My role</h2>
-        <p>Solo designer on a six-person product team, owning the experience end to end.</p>
-        <ul>
-          <li><b>Owned:</b> the IA of roles and permissions, the modular component model, the adaptive logic for what each role sees, and the full admin UI.</li>
-          <li><b>Owned:</b> the usability validation with administrators and the rationale brought to stakeholders on where to constrain versus where to flex.</li>
-          <li><b>Collaborated:</b> with engineering on how the permission model mapped to the interface, and with product/compliance stakeholders on the rules that couldn't bend.</li>
-        </ul>
-      </section>
-
+      <!-- RESEARCH -->
       <section class="cs-section reveal" id="research">
-        <h2>Research &amp; synthesis</h2>
-        <p>I ran contextual inquiry with administrators and usability testing on the existing flows. The recurring failure wasn't that people couldn't find features — it was that everyone saw <em>everything</em>, including actions they weren't permitted to take, which created noise, hesitation, and the occasional dangerous attempt.</p>
-        <p>Synthesis pointed to a structural fix rather than a cosmetic one: stop building one console for all roles and start building one <em>system</em> that renders the right console per role. The interface should reflect the permission model, not paper over it.</p>
-        <div class="cs-figure cs-figure--tall"><span class="ph">[ IMAGE — role/permission matrix &amp; common-vs-role-specific breakdown ]</span></div>
+        <h2>Talking to real people</h2>
+        <p>I interviewed 8–10 users across different user types and had multiple conversations with stakeholders to understand both user needs and business requirements. Six major pain points surfaced consistently.</p>
+
+        <div class="cs-problems">
+          <div class="cs-problem">
+            <span class="cs-problem__num">Pain point 01</span>
+            <h3>Critical information was invisible</h3>
+            <p>The existing profile showed basic info but users couldn't see the critical information they actually needed to do their job.</p>
+            <span class="decision__tension">High severity</span>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Pain point 02</span>
+            <h3>Zero organisational visibility</h3>
+            <p>Users in complex hierarchies had no visibility into their organisational structure — who was above them, who reported to them, who could authorise what.</p>
+            <span class="decision__tension">High severity</span>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Pain point 03</span>
+            <h3>Scattered security controls</h3>
+            <p>Password management, 2FA, and IP restrictions existed but were poorly organised — users couldn't find what they needed when they needed it.</p>
+            <span class="decision__tension">Medium severity</span>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Pain point 04</span>
+            <h3>No permission visibility</h3>
+            <p>Role-based users had no visibility into their permissions or authorisation limits — they couldn't tell what they were and weren't allowed to do.</p>
+            <span class="decision__tension">High severity</span>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Pain point 05</span>
+            <h3>Hidden transaction limits</h3>
+            <p>Users didn't know their daily or per-transaction limits, causing failed transactions and unnecessary support contacts.</p>
+            <span class="decision__tension">High severity</span>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Pain point 06</span>
+            <h3>No approval transparency</h3>
+            <p>No indication whether profile updates needed approval or would happen instantly — users were left uncertain after taking action.</p>
+            <span class="decision__tension">Medium severity</span>
+          </div>
+        </div>
+
+        <div class="cs-figure reveal"><span class="ph">[ IMAGE — affinity map in FigJam, pain points grouped by theme ]</span></div>
       </section>
 
+      <!-- THE AHA MOMENT -->
+      <section class="cs-section reveal" id="approach">
+        <h2>The aha moment</h2>
+        <p class="pull">We weren't just redesigning a profile screen. We were designing a control center that would help users understand their place in complex organisational hierarchies.</p>
+        <p>Once I understood the complexity, I knew a one-size-fits-all approach wouldn't cut it. I needed multiple variations of the profile screen — but they couldn't feel like completely different products.</p>
+        <p>The first thing I did was organise all my research into FigJam and start grouping pain points by theme. That's when the structure became clear: the answer wasn't more screens, it was a smarter system.</p>
+
+        <div class="decision">
+          <div class="decision__tension">The big question</div>
+          <h3>Seven separate profiles, or one flexible system?</h3>
+          <p><b>Option A — Seven separate profiles:</b> Design a distinct profile experience for each user type. Maximum tailoring, maximum maintenance burden, inevitable drift between versions over time.</p>
+          <p><b>Option B — One modular system:</b> Design a single adaptive framework where common elements stay consistent and role-specific sections appear only when relevant to the logged-in user.</p>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Decision · Option B, with a twist</div>
+          <h3>A modular system that adapts intelligently to who's logged in</h3>
+          <p><b>Common elements</b> — name, contact info, security settings — stay consistent across all user types. <b>Role-specific elements</b> — permissions, approval workflows, team hierarchy — appear only for users who need them. A Saral user wouldn't see "Team management." A Vistaar admin would.</p>
+          <p>The interface assembles itself from one component library rather than maintaining seven parallel products.</p>
+        </div>
+      </section>
+
+      <!-- INFORMATION ARCHITECTURE -->
+      <section class="cs-section reveal" id="ia">
+        <h2>Sketching the information architecture</h2>
+        <p>Based on user needs and the existing four-tab structure, I restructured the information architecture into a clearer, more logical hierarchy — one that reflected how users actually think about their profile, not how the system was built.</p>
+        <div class="cs-figure cs-figure--tall reveal"><span class="ph">[ IMAGE — restructured IA diagram with four main categories: Profile, Security, Payment, Settings ]</span></div>
+      </section>
+
+      <!-- WIREFRAMES -->
+      <section class="cs-section reveal" id="wireframes">
+        <h2>From chaos to clarity — wireframing</h2>
+        <p>I started with lo-fi sketches and went through multiple rounds of internal review with the team. I tested different layouts and components through A/B testing, and ran guerrilla testing to see which approaches felt more intuitive before committing to high-fidelity work.</p>
+        <div class="cs-figure reveal"><span class="ph">[ IMAGE — lo-fi wireframe sketches showing early layout explorations ]</span></div>
+      </section>
+
+      <!-- DESIGN DECISIONS -->
       <section class="cs-section reveal" id="decisions">
-        <h2>Design decisions</h2>
-        <p>The discipline here was restraint — the right move was a clean model, consistently applied, not a clever interface.</p>
+        <h2>Design decisions — three that shaped the outcome</h2>
 
         <div class="decision">
-          <div class="decision__tension">Tension · One interface for all vs. tailored per role</div>
-          <h3>A modular system: common elements + role-specific elements</h3>
-          <p>Designing a separate screen per role doesn't scale and drifts out of sync; designing one screen for everyone overwhelms and misleads. <span class="ruled">Ruled out: both extremes — bespoke-per-role and one-size-fits-all.</span> I split the interface into common elements every administrator shares and role-specific elements that appear by permission, so the console is assembled from one library rather than maintained as many.</p>
+          <div class="decision__tension">Decision 01 · Navigation structure</div>
+          <h3>Left navigation over single-page scroll</h3>
+          <p><b>Option 1 — Left navigation:</b> A sidebar organising information into distinct categories — Profile, Security, Payment, Settings — grouping related information together and providing clear mental models for where to find specific features.</p>
+          <p><b>Option 2 — Single-page layout:</b> All information accessible through one continuous scroll, with Primary Contact &amp; Authority, Business Information, and User Hierarchy &amp; Management visible at once.</p>
+          <p><b>We went with Option 1.</b> This structure scales better as features are added and reduces cognitive load — users focus on one category at a time instead of processing everything in a single overwhelming scroll.</p>
+          <div class="cs-figure reveal"><span class="ph">[ IMAGE — left navigation option vs. single-page scroll comparison ]</span></div>
         </div>
 
         <div class="decision">
-          <div class="decision__tension">Tension · Show-and-disable vs. adapt-to-context</div>
-          <h3>The interface adapts to who's logged in</h3>
-          <p>Showing actions a user can't take — greyed out — is honest but adds clutter and tempts mistakes in a context where mistakes are costly. I had the interface adapt to the signed-in role so people primarily see what's theirs to do, with access boundaries communicated clearly rather than left as dead controls. The console matches the user's authority.</p>
+          <div class="decision__tension">Decision 02 · Team hierarchy visualisation</div>
+          <h3>Flowchart over collapsible list — with an expandable twist</h3>
+          <p><b>Option 1 — Collapsible list:</b> A text-based tree showing the Regulator at the top, with expandable sections for Administrators and Transaction Users. Each card shows name, designation, department, employee ID, contact, and permissions.</p>
+          <p><b>Option 2 — Flowchart visualisation:</b> A diagram showing hierarchical relationships with connecting lines branching from high authority down through Administrators to Transaction Users.</p>
+          <p><b>We went with Option 2 — but with an expandable view.</b> At a glance, users can see who reports to whom, how many people sit under each admin, and where they fit in the organisation. The expandable detail layer adds depth without cluttering the overview.</p>
+          <div class="cs-figure reveal"><span class="ph">[ IMAGE — org chart flowchart visualisation with expandable detail ]</span></div>
         </div>
 
         <div class="decision">
-          <div class="decision__tension">Tension · Speed vs. safety on destructive actions</div>
-          <h3>Make granting fast, make revoking and risk legible</h3>
-          <p>Routine administration should be quick, but access changes carry weight. I kept the common path efficient while making the consequence of a change visible at the moment of action, so administrators move fast on the safe stuff and slow down exactly where the system needs them to.</p>
+          <div class="decision__tension">Decision 03 · Role-based adaptability</div>
+          <h3>Designing for role-based adaptability — the trickiest part</h3>
+          <p>The interface needed to be smart enough to show and hide sections based on user type without feeling inconsistent or confusing. I created a matrix mapping what appears for whom and why — this became the single source of truth for what the modular system needed to support.</p>
+          <div class="cs-figure cs-figure--tall reveal"><span class="ph">[ IMAGE — role × section matrix showing what appears for each of the seven user types ]</span></div>
         </div>
       </section>
 
-      <section class="cs-section reveal" id="design-work">
-        <h2>Design work</h2>
-        <p>The modular console, the adaptive views by role, and the access-change moments where clarity matters most.</p>
-        <div class="cs-figure"><span class="ph">[ IMAGE — admin console, common shell ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — same console adapted to a limited role ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — grant / revoke flow with consequence shown ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — role &amp; permission management view ]</span></div>
+      <!-- VISUAL DESIGN -->
+      <section class="cs-section reveal" id="design">
+        <h2>Visual design — what shipped</h2>
+
+        <div class="decision">
+          <div class="decision__tension">Screen 01 · Identity &amp; organisational visibility</div>
+          <h3>Visibility of required information</h3>
+          <p>This section addresses the core identity and organisational visibility needs. Users can now see comprehensive personal details, access company information, and understand their team structure — all in one place.</p>
+          <div class="cs-figure reveal"><span class="ph">[ IMAGE — profile screen showing personal details, company info, and team structure ]</span></div>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Screen 02 · Team hierarchy</div>
+          <h3>Understanding team structure at a glance</h3>
+          <p>A visual org chart shows the complete hierarchy from high authority down through three administrators to transaction users. Role badges provide instant recognition, and summary metrics at the top give a quick team snapshot without requiring deep navigation.</p>
+          <div class="cs-figure reveal"><span class="ph">[ IMAGE — org chart with role badges, from Regulator → Admins → Transaction Users, summary metrics above ]</span></div>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Screen 03 · Security &amp; payment settings</div>
+          <h3>Consolidated security access</h3>
+          <p>Instead of being scattered across different areas, all payment settings are now consolidated in one place — making it easy for users to enable, disable, or manage payment services as needed. Security controls (password, 2FA, IP restrictions) live here too, organised as a coherent set of controls rather than a list of disconnected options.</p>
+          <div class="cs-figure reveal"><span class="ph">[ IMAGE — consolidated security and payment settings screen ]</span></div>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Screen 04 · Permissions &amp; authorisation</div>
+          <h3>Visibility into permissions &amp; authorisation limits</h3>
+          <p>Quick transfers goes deeper by showing authorisation management — users can see exactly who can authorise transfers, with their details and limits displayed clearly. This visibility helps users understand not just their own permissions, but how authorisation works across their entire team.</p>
+          <div class="cs-figure reveal"><span class="ph">[ IMAGE — authorisation management view with transfer limits, authoriser details ]</span></div>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Screen 05 · Notifications</div>
+          <h3>Account-level notification control</h3>
+          <p>Users can now control SMS notifications for each account individually with simple toggles. Bulk "Disable all" and "Enable all" actions handle multiple accounts quickly, while search and pagination manage large account lists. An Important Notes sidebar clarifies OTP requirements and prevents confusion about duplicate messages.</p>
+          <div class="cs-figure reveal"><span class="ph">[ IMAGE — notification control screen with per-account toggles, bulk actions, important notes sidebar ]</span></div>
+        </div>
       </section>
 
+      <!-- TESTING -->
+      <section class="cs-section reveal" id="testing">
+        <h2>Testing</h2>
+
+        <div class="decision">
+          <div class="decision__tension">What worked</div>
+          <p>Users could finally see the information they'd been asking for. The role-based sections made sense without overwhelming simpler user types. Navigation felt natural even with all the new features. Security management was actually understandable.</p>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">What needed tweaking</div>
+          <p>Some terminology needed adjustment based on how users actually talked about things. A few sections needed reordering based on what people looked for first. Minor layout refinements for better readability.</p>
+        </div>
+
+        <p>After incorporating the feedback and getting final approval from stakeholders, I handed everything off to the development team.</p>
+      </section>
+
+      <!-- REFLECTION -->
       <section class="cs-section reveal" id="reflection">
-        <h2>Reflection</h2>
-        <p>What worked: treating this as a systems problem — one adaptive model instead of many screens — is what made the result both safer and more maintainable.</p>
-        <p><b>What didn't work / what I'd change:</b> the legacy starting point was a maintenance nightmare with an inconsistent experience built up over time, and untangling that mid-build cost more than expected. If I started again I'd invest earlier in nailing the permission-to-UI mapping with engineering before designing screens, so the modular model is locked before anything visual depends on it — that's the decision that keeps a system like this from drifting back into inconsistency.</p>
-        <div class="kv">
-          <div class="kv__row"><dt>Methods</dt><dd>Contextual inquiry · usability testing · affinity mapping</dd></div>
-          <div class="kv__row"><dt>Shipped</dt><dd>Modular, role-adaptive RBAC &amp; user-administration interface</dd></div>
-          <div class="kv__row"><dt>Timeline</dt><dd>6 months, 2026</dd></div>
+        <h2>Final thought</h2>
+        <p>This project taught me that the most interesting design challenges aren't always the flashiest ones. Taking something as fundamental as a profile screen and transforming it into a genuinely useful tool for thousands of corporate banking users — that's the kind of work that quietly matters.</p>
+        <p class="pull">In enterprise design, there's no such thing as "just a profile screen."</p>
+        <p>Would I underestimate the complexity next time? Hopefully not.</p>
+        <div class="kv" style="margin-top:var(--s5)">
+          <div class="kv__row"><dt>Methods</dt><dd>User interviews · stakeholder interviews · A/B testing · guerrilla testing · affinity mapping</dd></div>
+          <div class="kv__row"><dt>Shipped</dt><dd>Modular, role-adaptive profile management system for seven corporate banking user types</dd></div>
+          <div class="kv__row"><dt>Scope</dt><dd>Profile · Security · Payment settings · Org hierarchy · Permissions · Notifications</dd></div>
         </div>
       </section>
 

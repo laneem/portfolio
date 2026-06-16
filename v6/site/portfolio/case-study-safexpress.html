@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Safexpress Inbound Unloading — Karpaga Meenal</title>
-<meta name="description" content="Breaking the dock bottleneck: redesigning Safexpress's inbound unloading experience for staff working fast on the warehouse floor." />
+<title>Safexpress Inbound Transshipment — Karpaga Meenal</title>
+<meta name="description" content="Redesigning Safexpress's inbound unloading process — from manual, error-prone workflows to a mobile-first system for 10,000+ frontline workers across regional hubs." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -29,122 +29,277 @@
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="cs-hero wrap">
-    <p class="eyebrow reveal">Case 02 · Logistics</p>
-    <h1 class="cs-hero__title reveal">Breaking the bottleneck: reimagining Safexpress's inbound unloading</h1>
-    <p class="cs-hero__tag reveal">The dock was the hidden constraint on the whole operation. I redesigned the unloading experience for people working fast, on their feet, not at a desk.</p>
+    <p class="eyebrow reveal">Case 02 · Logistics · Mobile-first · Frontline Workers</p>
+    <h1 class="cs-hero__title reveal">Inbound Transshipment — Unloading Redesign for Safexpress</h1>
+    <p class="cs-hero__tag reveal">Safexpress's inbound transshipment process was clogged at the unloading stage — manual workflows, weak visibility for team leads, high error rates in scanning, delaying downstream dispatch. I led the design effort to fix it.</p>
 
     <div class="cs-figure cs-hero__figure reveal">
-      <span class="ph">[ HERO IMAGE — inbound unloading dashboard / scanning view ]</span>
+      <span class="ph">[ HERO IMAGE — unloading dashboard on desktop and Zebra handheld scanner device ]</span>
     </div>
 
     <dl class="cs-hero__meta reveal">
-      <div><dt>Role</dt><dd>Solo UX Designer</dd></div>
-      <div><dt>Team</dt><dd>Embedded in a 6-person product team</dd></div>
-      <div><dt>Timeline</dt><dd>~1 year · 2024</dd></div>
+      <div><dt>Role</dt><dd>Senior UX Designer</dd></div>
+      <div><dt>Client</dt><dd>Safexpress</dd></div>
+      <div><dt>Timeline</dt><dd>2024</dd></div>
       <div><dt>Domain</dt><dd>Logistics / warehouse operations</dd></div>
     </dl>
   </section>
 
+  <!-- LAYOUT -->
   <div class="wrap cs-layout">
+
+    <!-- STICKY INDEX -->
     <aside class="cs-index" aria-label="On this page">
       <span class="cs-index__label">On this page</span>
       <ol>
-        <li><a href="#summary" class="active">Summary</a></li>
-        <li><a href="#impact">Impact</a></li>
-        <li><a href="#context">Context</a></li>
-        <li><a href="#role">Role</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#decisions">Decisions</a></li>
-        <li><a href="#design-work">Design work</a></li>
+        <li><a href="#overview" class="active">Overview</a></li>
+        <li><a href="#challenge">Challenge</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#reapproach">Re-approach</a></li>
+        <li><a href="#design">Design</a></li>
+        <li><a href="#flow">Unloading Flow</a></li>
+        <li><a href="#outcome">Outcome</a></li>
         <li><a href="#reflection">Reflection</a></li>
       </ol>
     </aside>
 
+    <!-- BODY -->
     <div class="cs-body">
 
-      <section class="cs-section reveal" id="summary">
-        <h2>Summary</h2>
-        <p>Inbound unloading at the dock was slowing everything downstream — once a vehicle backs up at intake, the whole facility waits. As the solo designer on a six-person team, I redesigned the unloading experience around how warehouse staff actually move: fast scanning, quick category access, and a live view of vehicle progress. The result was a fully functional system and a client team that came out of the project with new design and product skills.</p>
-        <ul class="tags" style="margin-top:1.2rem">
-          <li>Operations UX</li><li>On-floor / non-desk users</li><li>Contextual inquiry</li><li>Usability testing</li><li>Affinity mapping</li>
-        </ul>
-      </section>
+      <!-- OVERVIEW -->
+      <section class="cs-section reveal" id="overview">
+        <h2>Unloading was where the whole operation got stuck</h2>
+        <p>Safexpress operates a network of regional hubs. The inbound transshipment segment handles truck arrival, unloading, sorting, and onward dispatch. The process was clogged at the unloading stage — manual workflows, weak visibility for team leads, high error rates in scanning — delaying everything downstream.</p>
+        <p>Over the course of several weeks, I led the design effort to discover and document warehouse workflows, create intuitive mobile interfaces, conduct stakeholder workshops, and guide the team through an agile design process.</p>
+        <p>We successfully delivered a fully functional unloading management system that is currently being piloted in several warehouses, and set the foundation for additional features for the system to be scaled up.</p>
 
-      <section class="cs-section reveal" id="impact">
-        <h2>Impact</h2>
         <div class="metric-row">
-          <div class="metric"><div class="num"><em>~35%</em><span class="note" style="display:block;margin-top:.5rem">verify</span></div><span class="lbl">faster dock turnaround</span></div>
-          <div class="metric"><div class="num"><em>Live</em></div><span class="lbl">fully functional system shipped</span></div>
-          <div class="metric"><div class="num"><em>+1</em></div><span class="lbl">client team upskilled in UX</span></div>
+          <div class="metric"><div class="num"><em>10,000+</em></div><span class="lbl">Frontline workers impacted</span></div>
+          <div class="metric"><div class="num"><em>4 | 12</em></div><span class="lbl">Hub visits | Workshops</span></div>
+          <div class="metric"><div class="num"><em>5</em></div><span class="lbl">Stakeholder interviews</span></div>
+          <div class="metric"><div class="num"><em>20 | 4</em></div><span class="lbl">User interviews | Whiteboard sessions</span></div>
         </div>
-        <p>What shipped: a category search-and-tabs structure for fast item access, a quick-scanning flow built for speed and error-recovery, contextual quick actions at the point of work, and a vehicle-progress view that makes the state of the dock legible at a glance.</p>
-        <p class="note">Replace the turnaround figure with your verified operational metric (unload time per vehicle, throughput per shift, or error rate) — that's the number a logistics hiring manager will look for first.</p>
+
+        <div class="cs-figure reveal"><span class="ph">[ IMAGE — warehouse floor context, trucks at dock, team unloading ]</span></div>
+
+        <div class="cs-methods" style="margin-top:var(--s4)">
+          <div class="cs-method">
+            <span class="cs-method__num">→</span>
+            <div><b>Key Collaborators</b><p>Stakeholders · Product Owner · Operations Team · Development Team</p></div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">→</span>
+            <div><b>Expertise applied</b><p>UX design and research · Mobile-first design for frontline workers · Workflow optimisation and process mapping</p></div>
+          </div>
+        </div>
       </section>
 
-      <section class="cs-section reveal" id="context">
-        <h2>Context — why this mattered</h2>
-        <p>In logistics, the dock is a throughput valve. Inbound unloading sets the pace for put-away, sorting, and outbound — so a slow, error-prone intake doesn't stay a local problem, it taxes the entire network. The existing experience assumed a deskbound, deliberate user. The real user is standing at a vehicle, under time pressure, often with one hand busy and no patience for a flow that wasn't built for the floor.</p>
-        <p class="pull">The bottleneck wasn't the people — it was an interface that fought how they actually work.</p>
+      <!-- CHALLENGE -->
+      <section class="cs-section reveal" id="challenge">
+        <h2>Modernizing operations with minimal impact to familiar workflows</h2>
+        <p>Unloading operations were challenged on every front — not just one problem to solve, but a cluster of interconnected failures that compounded each other across every shift.</p>
+
+        <div class="cs-problems">
+          <div class="cs-problem">
+            <span class="cs-problem__num">Challenge 01</span>
+            <h3>No real-time visibility</h3>
+            <p>Inconsistent unloading times, limited real-time visibility, and reliance on manual coordination meant supervisors couldn't accurately track progress or intervene during delays.</p>
+            <span class="decision__tension">High severity</span>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Challenge 02</span>
+            <h3>Scanning mismatches &amp; system lag</h3>
+            <p>Scanning errors and delayed system updates prevented supervisors from knowing where things actually stood. Reactive decision-making and frequent team idle periods were the result.</p>
+            <span class="decision__tension">High severity</span>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Challenge 03</span>
+            <h3>Manual floor communication</h3>
+            <p>Communication depended on verbal updates and phone calls, leading to confusion, misalignment across teams, and avoidable downtime. No shared source of truth existed on the floor.</p>
+            <span class="decision__tension">High severity</span>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Challenge 04</span>
+            <h3>Unreliable handheld application</h3>
+            <p>Reliability and usability issues with the handheld app disrupted workflows and reduced confidence in system data, further impacting productivity and data accuracy.</p>
+            <span class="decision__tension">High severity</span>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Challenge 05</span>
+            <h3>No performance metrics</h3>
+            <p>The lack of clear performance metrics and real-time dashboards made effective monitoring and accountability across shifts impossible. Insufficient automation and digital transparency created operational inefficiencies across the board.</p>
+            <span class="decision__tension">Medium severity</span>
+          </div>
+        </div>
       </section>
 
-      <section class="cs-section reveal" id="role">
-        <h2>My role</h2>
-        <p>I was the solo designer embedded in a six-person product team, which meant I owned the full arc and partnered closely across functions.</p>
-        <ul>
-          <li><b>Owned:</b> research on the floor, the IA for inbound items, the unloading and scanning flows, the vehicle-progress model, and the full UI.</li>
-          <li><b>Owned:</b> running the design thinking with the client and bringing their team along — part of the deliverable was capability, not just screens.</li>
-          <li><b>Collaborated:</b> with engineering and product on feasibility and sequencing, and with client stakeholders on operational rules and edge cases.</li>
-        </ul>
-      </section>
+      <!-- APPROACH -->
+      <section class="cs-section reveal" id="approach">
+        <h2>Ride-along research leads to empathy, and uncovering opportunities</h2>
+        <p>To observe and document workflows across different functional areas, the team and I split up to shadow employees in different parts of the warehouse. Over the course of a few days, we gathered dozens of photos, pages of notes, and hours of video.</p>
+        <p>Most revealing were the various <b>paper-based workarounds</b> that had been created to fill gaps in the existing system. These weren't failures of the people — they were signals of where the system had let them down.</p>
 
-      <section class="cs-section reveal" id="research">
-        <h2>Research &amp; synthesis</h2>
-        <p>I used contextual inquiry to watch unloading happen, not to ask people to describe it after the fact — the gap between the two is where the bottleneck lived. Usability testing then pressure-tested the flow against real speed, and affinity mapping turned the observations into a small set of requirements.</p>
-        <p>The core insight: staff don't browse, they <em>hunt</em>. They need to get to the right category and confirm a scan in as few moves as possible, and they need to know where each vehicle stands without asking anyone. Anything that adds a tap or a moment of doubt compounds across hundreds of items per shift.</p>
-        <div class="cs-figure cs-figure--tall"><span class="ph">[ IMAGE — current-state workflow audit / pain-point map ]</span></div>
-      </section>
+        <h3 style="margin-top:var(--s4)">User interviews — four roles, one broken system</h3>
+        <p>We conducted structured interviews across the key roles involved in hub unloading to surface the pain points behind the paper trails.</p>
+        <div class="cs-methods">
+          <div class="cs-method">
+            <span class="cs-method__num">01</span>
+            <div>
+              <b>Team Member — Unloader (Primary User)</b>
+              <p>Assignments were unclear until verbally communicated. Multiple clicks were needed for each scan, slowing the workflow. Frequent network drops forced rescans. Users wanted a simple, fast interface with minimal steps.</p>
+            </div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">02</span>
+            <div>
+              <b>Experienced Team Member (4+ yrs)</b>
+              <p>Reverted to paper notes when the app failed to sync. Worked faster with visual cues and fewer forms. Wanted sound/vibration feedback for successful scans to confirm without looking at the screen.</p>
+            </div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">03</span>
+            <div>
+              <b>New Team Member (joined &lt; 6 months)</b>
+              <p>Found the app too technical and confusing. Icons were unclear and actions took too long. Needed a step-by-step guided flow — no assumed knowledge, no hidden steps.</p>
+            </div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">04</span>
+            <div>
+              <b>Shift Lead — Field Supervisor</b>
+              <p>Relied on manual headcounts and verbal updates. Had no live visibility of who was idle or busy. Wanted system-generated task rotation and alerts to replace the radio-and-shouting coordination model.</p>
+            </div>
+          </div>
+        </div>
 
-      <section class="cs-section reveal" id="decisions">
-        <h2>Design decisions</h2>
-        <p>Designing for the floor is a constant trade between completeness and speed. Three decisions defined the system.</p>
+        <h3 style="margin-top:var(--s4)">Three opportunity areas the interviews revealed</h3>
+        <div class="metric-row">
+          <div class="metric"><div class="num"><em>01</em></div><span class="lbl">Real-time transparency — a live dashboard for supervisors and a visible queue for team members</span></div>
+          <div class="metric"><div class="num"><em>02</em></div><span class="lbl">Simplified workflow — reduced navigation steps and offline scan caching for network dead zones</span></div>
+          <div class="metric"><div class="num"><em>03</em></div><span class="lbl">Empowered users — self-assigned next tasks and performance tracking for motivation</span></div>
+        </div>
+
+        <h3 style="margin-top:var(--s4)">Persona — Transshipment Inbound Team Member</h3>
+        <div class="cs-figure cs-figure--tall reveal"><span class="ph">[ IMAGE — Persona: Rajesh Kumar · Transshipment Inbound Team Member · Morning Shift · 3 Years Experience · Goals, Key Challenges, Technology Use, Personality/Mindset ]</span></div>
+
+        <h3 style="margin-top:var(--s4)">Journey map — TL &amp; TM (Unloading)</h3>
+        <div class="cs-figure cs-figure--tall reveal"><span class="ph">[ IMAGE — Journey Map: TL &amp; TM Unloading · 7 stages: Creation of Unloading Tally → Vehicle Condition Verification → Receives &amp; Views Unloading Task → Start Unloading → Identify Issues → Complete Task → Supervise &amp; Approve · with emotions and pain-point callouts ]</span></div>
+
+        <div class="cs-figure reveal"><span class="ph">[ IMAGE — warehouse shadowing: team members observing floor operations, paper workarounds in use ]</span></div>
+
+        <p>During the stakeholder workshop and hub visit, the team provided a walkthrough focusing on how goods are received and unloaded at the hub. The session helped visualise the complete operational flow — from arrival and dock allocation through to unloading, sorting, and movement to outbound areas.</p>
+
+        <div class="cs-figure cs-figure--tall reveal"><span class="ph">[ IMAGE — user flows documentation and design system page for components ]</span></div>
+
+        <p>While the functional team on the client side began building user flows, the design team created a scalable navigation layout and design system with basic components for desktop and mobile formats — specifically for Zebra handheld scanner devices running Android.</p>
+        <p>Soon, the team was creating wireframes. With the design system in place, we were able to quickly move into UI mock-ups.</p>
 
         <div class="decision">
-          <div class="decision__tension">Tension · Findability vs. fewest taps</div>
-          <h3>Category search &amp; tabs over deep menus</h3>
-          <p>A complete inbound catalogue wants structure, but deep navigation is death on the floor. <span class="ruled">Ruled out: nested category trees.</span> I combined search with a flat set of tabs so staff can either jump straight to a known category or filter fast — findability without the drilling.</p>
+          <div class="decision__tension">Pivot point — hitting a wall with user stories</div>
+          <h3>The sprint cycle kept running into roadblocks</h3>
+          <p>We began running into issues with the user stories. The sprint cycle kept hitting roadblocks validating requirements, which left the design team blocked. As it turned out, observing employees and learning their workflows did not translate into robust, design-ready user stories. The client's functional team was new to Agile methodology and needed more support to be successful. We decided to take a pause and re-assess the project scope and needs.</p>
+        </div>
+
+        <div class="cs-figure reveal"><span class="ph">[ IMAGE — typical design team workflow diagram and collaboration structure ]</span></div>
+      </section>
+
+      <!-- RE-APPROACH -->
+      <section class="cs-section reveal" id="reapproach">
+        <h2>Product visioning workshops pave the way for a clearer future</h2>
+        <p>Over the course of a week, the project leadership and I led a series of visioning workshops to level-set on the scope and deep-dive into each functional area. Armed with several big whiteboards, I facilitated discussions with the client's functional team and subject-matter experts to define Happy Paths and Unhappy Paths for each area. We then did high-level sketches of key screens.</p>
+        <p>Having all this information made visible helped align all stakeholders and gave the design team more solid requirements to work from.</p>
+
+        <div class="cs-figure reveal"><span class="ph">[ IMAGE — whiteboard workshop with team: Happy Path and Unhappy Path flows mapped out ]</span></div>
+        <div class="cs-figure reveal"><span class="ph">[ IMAGE — simple box sketches defining the vision for each screen flow ]</span></div>
+
+        <p>Since the week-long visioning workshops were not initially part of the project timeline, I also reworked the design team timeline to account for the change in scope as well as an extension of the project.</p>
+        <p>With these workshops complete, I was able to more confidently educate the client's functional team on Agile best practices and help them write clear user stories. The design and dev teams could then efficiently iterate on designs and build features with fewer blockers.</p>
+      </section>
+
+      <!-- DESIGN -->
+      <section class="cs-section reveal" id="design">
+        <h2>A versatile and robust system that follows UX best practices</h2>
+        <p>The unloading dashboard gives team members everything they need from the moment they start a session — designed so that finding trucks, scanning waybills, and checking status is straightforward, with a clear information hierarchy optimised for handheld devices under real working conditions.</p>
+
+        <div class="cs-figure cs-figure--tall reveal"><span class="ph">[ IMAGE — unloading dashboard on desktop: truck list, status indicators, real-time counters ]</span></div>
+
+        <div class="decision">
+          <div class="decision__tension">Feature 01 · Category Search &amp; Tabs</div>
+          <h3>A clear truck list with priority indicators</h3>
+          <p>Team members see a clear list of trucks assigned to them for the shift with priority indicators — so they always know what to work on next without asking a supervisor. Search and tabs let them jump to a known category or filter fast, without navigating deep menus.</p>
+          <div class="cs-figure reveal"><span class="ph">[ IMAGE — category search and tabs view on handheld device ]</span></div>
         </div>
 
         <div class="decision">
-          <div class="decision__tension">Tension · Data accuracy vs. scanning speed</div>
-          <h3>Quick scanning with recovery built in</h3>
-          <p>The fastest scan flow is useless if a mis-scan stops the line. I designed scanning for speed first and made error-recovery immediate and in-context, so a wrong scan is a half-second correction, not a trip back through a flow. Contextual quick actions sit right where the work happens, so the next step is always one move away.</p>
+          <div class="decision__tension">Feature 02 · Quick Scanning</div>
+          <h3>Streamlined waybill scanning with built-in exception handling</h3>
+          <p>The scanning flow is built for speed first. For damaged or mislabelled packages, exception handling is immediate and in-context — a wrong scan is a half-second correction, not a trip back through a flow. Contextual quick actions sit right where the work happens, so the next step is always one move away.</p>
+          <div class="cs-figure reveal"><span class="ph">[ IMAGE — quick scanning screen on handheld: waybill entry, package count, exception state ]</span></div>
         </div>
 
         <div class="decision">
-          <div class="decision__tension">Tension · Detail vs. situational awareness</div>
-          <h3>Vehicle progress as the anchor view</h3>
-          <p>Supervisors and staff kept asking the same question — "where is this vehicle?" I made vehicle progress a first-class, glanceable view so the state of the dock is legible without interrupting anyone. The detail is available; the default is awareness.</p>
+          <div class="decision__tension">Feature 03 · Vehicle Progress</div>
+          <h3>Final sign-off and glanceable dock status</h3>
+          <p>Supervisors and team members can see where every vehicle stands at a glance — waybills scanned, packages counted, status. Final sign-off and status change happens here once all items are unloaded and verified. The state of the dock is legible without interrupting anyone's work.</p>
+          <div class="cs-figure reveal"><span class="ph">[ IMAGE — vehicle progress view: truck status, waybill/package tally, sign-off action ]</span></div>
         </div>
       </section>
 
-      <section class="cs-section reveal" id="design-work">
-        <h2>Design work</h2>
-        <p>The system in use: category access, the scanning flow, contextual actions, and the progress view that ties the dock together.</p>
-        <div class="cs-figure"><span class="ph">[ IMAGE — category search &amp; tabs ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — quick-scan flow + error recovery ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — contextual quick actions at point of work ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — vehicle progress view ]</span></div>
+      <!-- UNLOADING FLOW -->
+      <section class="cs-section reveal" id="flow">
+        <h2>The unloading flow end to end</h2>
+        <p>The full flow takes a team member from starting an unloading session through to completion and handoff — four states, each designed to keep the work moving without requiring decisions that shouldn't be theirs to make.</p>
+
+        <div class="ia-compare" style="grid-template-columns: repeat(4, 1fr); gap: var(--s2);">
+          <div class="ia-after">
+            <span class="ia-compare__label ia-compare__label--after">Step 01</span>
+            <b>Scan Waybills</b>
+            <span>Open session · select truck · begin scanning waybill by waybill</span>
+          </div>
+          <div class="ia-after">
+            <span class="ia-compare__label ia-compare__label--after">Step 02</span>
+            <b>Summary</b>
+            <span>Live tally — waybills scanned, packages counted, exceptions flagged</span>
+          </div>
+          <div class="ia-after">
+            <span class="ia-compare__label ia-compare__label--after">Step 03</span>
+            <b>Pending Waybill List</b>
+            <span>Review outstanding items, resolve exceptions, confirm completeness</span>
+          </div>
+          <div class="ia-after">
+            <span class="ia-compare__label ia-compare__label--after">Step 04</span>
+            <b>Complete</b>
+            <span>Unloading confirmed · sent to team lead for approval · ready for next task</span>
+          </div>
+        </div>
+
+        <div class="cs-figure cs-figure--tall reveal"><span class="ph">[ IMAGE — full unloading flow across four screens: scan → summary → pending list → complete ]</span></div>
       </section>
 
+      <!-- OUTCOME -->
+      <section class="cs-section reveal" id="outcome">
+        <h2>A fully functional system and an eager client team with new skills</h2>
+        <p>The fully functional unloading management system is currently being piloted in several warehouses. With the visioning workshops complete, I was able to educate the client's functional team on Agile best practices and help them write clear user stories. The design and dev teams could then efficiently iterate on designs and build features with fewer blockers.</p>
+        <div class="metric-row">
+          <div class="metric"><div class="num"><em>Piloting</em></div><span class="lbl">across several warehouses</span></div>
+          <div class="metric"><div class="num"><em>Scalable</em></div><span class="lbl">foundation for additional features</span></div>
+          <div class="metric"><div class="num"><em>+Skills</em></div><span class="lbl">client team upskilled in Agile</span></div>
+        </div>
+      </section>
+
+      <!-- REFLECTION -->
       <section class="cs-section reveal" id="reflection">
-        <h2>Reflection</h2>
-        <p>What worked: anchoring the design in floor observation, not stakeholder description, is what kept the flows honest about speed and error.</p>
-        <p><b>What didn't work / what I'd change:</b> we ran the whiteboarding sessions with the client team but not with the exact end users doing the unloading. That kept us one step removed from the real constraint, and a couple of assumptions only surfaced in testing that earlier user contact would have caught sooner. Next time I'd put the actual floor users in the room from the first session — proximity to the real user is worth more than a tidier stakeholder workshop.</p>
-        <div class="kv">
-          <div class="kv__row"><dt>Methods</dt><dd>Contextual inquiry · usability testing · affinity mapping · workflow audit</dd></div>
-          <div class="kv__row"><dt>Shipped</dt><dd>Inbound unloading system: search/tabs, quick-scan, contextual actions, vehicle progress</dd></div>
-          <div class="kv__row"><dt>Timeline</dt><dd>~1 year, 2024</dd></div>
+        <h2>Addressing the elephant in the room can take up time, but saves more time in the future</h2>
+        <p>When the team first decided to pause to conduct the product visioning workshops, I was worried about how much that would impact our timelines. The design team was already behind schedule on several features due to churn with the requirements.</p>
+        <p>However, stopping to re-visit the scope and user journeys ended up being exactly what we needed to move faster. The one-week pause in designing led to much more clarity and greatly reduced the number of iterations needed for each design flow. The project leadership recognised the need and were on board with extending the overall timeline, affording us the space and resources to do our best work.</p>
+        <p class="pull">Sometimes, the fastest way to move forward is to stop and take a look around first.</p>
+        <div class="kv" style="margin-top:var(--s5)">
+          <div class="kv__row"><dt>Methods</dt><dd>Ride-along research · stakeholder workshops · product visioning · user flows · wireframing · usability testing</dd></div>
+          <div class="kv__row"><dt>Shipped</dt><dd>Inbound unloading management system: category search &amp; tabs, quick scanning, vehicle progress, complete unloading flow</dd></div>
+          <div class="kv__row"><dt>Platform</dt><dd>Desktop · Zebra handheld scanner (Android)</dd></div>
+          <div class="kv__row"><dt>Timeline</dt><dd>2024</dd></div>
         </div>
       </section>
 

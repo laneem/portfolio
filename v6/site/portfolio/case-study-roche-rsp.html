@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Roche RSP — Rave Support Portal — Karpaga Meenal</title>
-<meta name="description" content="Designing a scalable clinical-trial data-entry experience for Roche's Rave Support Portal, where accuracy is regulated and every misstep delays a trial." />
+<meta name="description" content="Redesigning a fragmented clinical support system into a unified, intelligent workspace — built to help clinical operations teams stay on top of every trial, everywhere." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -30,19 +30,19 @@
 
 <main>
   <section class="cs-hero wrap">
-    <p class="eyebrow reveal">Case 04 · Healthcare</p>
-    <h1 class="cs-hero__title reveal">A scalable clinical-trial data-entry experience for the Rave Support Portal</h1>
-    <p class="cs-hero__tag reveal">Streamlining clinical operations, where accuracy is regulated and a single misstep can delay a trial.</p>
+    <p class="eyebrow reveal">Case 04 · Healthcare · Clinical Trials · Enterprise</p>
+    <h1 class="cs-hero__title reveal">Rave Support Portal — One Platform for All Rave Clinical Trial Support</h1>
+    <p class="cs-hero__tag reveal">Redesigning a fragmented clinical support system into a unified, intelligent workspace — built to help clinical operations teams stay on top of every trial, everywhere.</p>
 
     <div class="cs-figure cs-hero__figure reveal">
-      <span class="ph">[ HERO IMAGE — RSP data-entry workspace ]</span>
+      <span class="ph">[ HERO IMAGE — Rave Support Portal unified dashboard ]</span>
     </div>
 
     <dl class="cs-hero__meta reveal">
-      <div><dt>Role</dt><dd>Solo UX Designer — one-person team</dd></div>
-      <div><dt>Team</dt><dd>Embedded with engineering &amp; clinical ops</dd></div>
-      <div><dt>Timeline</dt><dd>6 months · 2026</dd></div>
-      <div><dt>Domain</dt><dd>Healthcare / clinical trials</dd></div>
+      <div><dt>Role</dt><dd>Senior UX Designer</dd></div>
+      <div><dt>Client</dt><dd>Roche</dd></div>
+      <div><dt>Platform</dt><dd>Desktop / Web</dd></div>
+      <div><dt>Domain</dt><dd>Healthcare / Clinical Trials</dd></div>
     </dl>
   </section>
 
@@ -50,101 +50,265 @@
     <aside class="cs-index" aria-label="On this page">
       <span class="cs-index__label">On this page</span>
       <ol>
-        <li><a href="#summary" class="active">Summary</a></li>
+        <li><a href="#overview" class="active">Overview</a></li>
+        <li><a href="#problems">Problems</a></li>
+        <li><a href="#decisions">Design Decisions</a></li>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+        <li><a href="#principles">Principles</a></li>
         <li><a href="#impact">Impact</a></li>
-        <li><a href="#context">Context</a></li>
-        <li><a href="#role">Role</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#decisions">Decisions</a></li>
-        <li><a href="#design-work">Design work</a></li>
         <li><a href="#reflection">Reflection</a></li>
       </ol>
     </aside>
 
     <div class="cs-body">
 
-      <section class="cs-section reveal" id="summary">
-        <h2>Summary</h2>
-        <p>Roche's Rave Support Portal (RSP) supports clinical-trial data entry — a context where data has to be accurate, traceable, and entered under regulatory scrutiny. As the sole designer, I reworked the experience to keep support teams oriented through long, exacting workflows: timely updates and alerts, bookmarks to hold their place, a help layer that responds to context, and clear guidance to the next step. The work produced measurable improvements in clinical operations.</p>
-        <ul class="tags" style="margin-top:1.2rem">
-          <li>Clinical-trial systems</li><li>Data-entry UX</li><li>Regulated / traceable</li><li>Contextual inquiry</li><li>Usability testing</li>
-        </ul>
-      </section>
-
-      <section class="cs-section reveal" id="impact">
-        <h2>Impact</h2>
+      <section class="cs-section reveal" id="overview">
+        <h2>One platform for all Rave clinical trial support</h2>
+        <p>The Rave Support Portal (RSP) is the global platform used by Roche's clinical operations teams to manage data-entry workflows across Rave — the industry-standard EDC system for clinical trial data. Clinical teams rely on RSP to handle form submission, track trial updates, and coordinate across studies running simultaneously worldwide.</p>
+        <p>The problem: despite being central to trial operations, RSP had grown fragmented. Forms were siloed. Updates were buried. Help was nowhere near where the work happened. Teams were spending time navigating the system rather than running trials.</p>
         <div class="metric-row">
-          <div class="metric"><div class="num"><em>~40%</em><span class="note" style="display:block;margin-top:.5rem">verify</span></div><span class="lbl">less rework / handoff effort</span></div>
-          <div class="metric"><div class="num"><em>↑</em></div><span class="lbl">data-entry accuracy &amp; throughput</span></div>
-          <div class="metric"><div class="num"><em>↓</em></div><span class="lbl">time lost re-finding context</span></div>
+          <div class="metric"><div class="num"><em>12+</em></div><span class="lbl">Rave clinical workflows supported</span></div>
+          <div class="metric"><div class="num"><em>Global</em></div><span class="lbl">Operations across worldwide clinical sites</span></div>
         </div>
-        <p>What shipped: an updates-and-alerts system that surfaces what changed and what needs attention, bookmarks that let users hold a position in long workflows, a dynamic help section that answers in context, and guided "next step" cues that keep entry moving without dropping accuracy.</p>
-        <p class="note">For a clinical/health-tech reviewer, the persuasive evidence is operational and quality-based — query rate, data-entry error rate, cycle time per form. Swap in your verified figures.</p>
-      </section>
-
-      <section class="cs-section reveal" id="context">
-        <h2>Context — why this mattered</h2>
-        <p>Clinical-trial data entry sits on the critical path of getting a therapy through a trial. Errors don't just cost time — they generate queries, audit risk, and delays that ripple across a study. The support teams doing this work move through long, detailed forms where it's easy to lose your place, miss an update, or stall waiting for the right answer. Every one of those friction points is a quality risk in a regulated environment.</p>
-        <p class="pull">In clinical operations, helping someone keep their place is a data-integrity feature, not a convenience.</p>
-      </section>
-
-      <section class="cs-section reveal" id="role">
-        <h2>My role</h2>
-        <p>I was a one-person design team on RSP — effectively owning the whole experience while partnering tightly with engineering and clinical operations.</p>
-        <ul>
-          <li><b>Owned:</b> research with support teams, the workflow redesign, the updates/alerts/help/bookmark systems, and the full UI through to handoff.</li>
-          <li><b>Owned:</b> the prioritisation calls on what to fix first given limited design capacity and a regulated, change-controlled environment.</li>
-          <li><b>Collaborated:</b> with engineering on feasibility within the existing portal, and with clinical-operations stakeholders on what the data and the regulations required.</li>
+        <ul class="tags" style="margin-top:1.2rem">
+          <li>Clinical-trial systems</li><li>Enterprise UX</li><li>Regulated workflows</li><li>Contextual help</li><li>Form design</li>
         </ul>
       </section>
 
-      <section class="cs-section reveal" id="research">
-        <h2>Research &amp; synthesis</h2>
-        <p>Through contextual inquiry and usability testing with support staff, the pattern was consistent: people weren't failing at data entry, they were losing <em>continuity</em>. They'd lose their place in a long form, miss that something upstream had changed, or break flow to hunt for help — and each interruption is where errors creep in.</p>
-        <p>Synthesis reframed the problem from "make the form nicer" to "keep the operator oriented." The design needed to protect attention and continuity across long, exacting tasks — that became the brief.</p>
-        <div class="cs-figure cs-figure--tall"><span class="ph">[ IMAGE — workflow map / continuity break-points ]</span></div>
+      <section class="cs-section reveal" id="problems">
+        <h2>The workflows were fragmented, silent, and blind</h2>
+        <p>Research with clinical operations users surfaced a consistent pattern: the system had never been designed around how people actually work. Six recurring pain points emerged across interviews and contextual inquiry sessions.</p>
+        <div class="cs-problems">
+          <div class="cs-problem">
+            <span class="cs-problem__num">Problem 01</span>
+            <h3>No form guidance</h3>
+            <p>Users had no indication of where to start or what the priority order of forms was. Every session began with orientation overhead before any actual work could begin.</p>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Problem 02</span>
+            <h3>Siloed form duplication</h3>
+            <p>The same forms were being created and filled multiple times by different team members with no visibility across users. Duplication was invisible until the audit stage — by which point it created rework.</p>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Problem 03</span>
+            <h3>No access to frequent tools</h3>
+            <p>Power users who worked with the same set of forms daily had no way to save or quickly access their most-used workflows. Every session meant navigating from scratch.</p>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Problem 04</span>
+            <h3>Manual user form documentation</h3>
+            <p>Users maintained offline notes and spreadsheets to track form requirements and field definitions — work the system should have been doing. This documentation was inconsistent, outdated, and non-transferable.</p>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Problem 05</span>
+            <h3>Trial updates buried in workflow</h3>
+            <p>Changes to trial protocols, form requirements, or data queries were only visible mid-form — meaning users discovered important updates after already committing time to an outdated version of the task.</p>
+          </div>
+          <div class="cs-problem">
+            <span class="cs-problem__num">Problem 06</span>
+            <h3>High cognitive load for users</h3>
+            <p>With no in-context help, no smart defaults, and no guidance between tasks, users carried all the cognitive load themselves. Even experienced operators described the system as exhausting to use.</p>
+          </div>
+        </div>
       </section>
 
       <section class="cs-section reveal" id="decisions">
-        <h2>Design decisions</h2>
-        <p>Each decision traded raw simplicity for the things that actually protect accuracy in a regulated workflow.</p>
+        <h2>Four decisions that changed the experience</h2>
+        <p>Each decision addressed one of the core fragmentation problems — surfacing what was hidden, shortcutting what was slow, and reducing what was unnecessary.</p>
 
         <div class="decision">
-          <div class="decision__tension">Tension · A clean screen vs. never missing a change</div>
-          <h3>Updates &amp; alerts that surface, without shouting</h3>
-          <p>In a trial portal, a missed update is a quality problem; but alert overload trains people to ignore alerts. <span class="ruled">Ruled out: a blanket notification feed.</span> I designed updates and alerts to surface what changed and what needs the operator's attention, prioritised so the signal stays trustworthy — present enough to be relied on, restrained enough to keep meaning.</p>
+          <div class="decision__tension">Decision 01 · Updates &amp; Alerts</div>
+          <h3>Updates and alerts — visible the moment you log in</h3>
+          <p>Previously, trial updates and data queries only surfaced inside the form workflow — meaning users discovered them mid-task, after already committing time to the wrong version of the work. <span class="ruled">Ruled out: an email-based notification system (creates a separate context-switch and gets buried).</span> The new RSP surfaces personalised alerts and trial updates on the login dashboard, prioritised so the most time-sensitive items appear first. Users know what needs attention before they open a single form.</p>
+          <ul>
+            <li>Personalised alert feed visible immediately on login</li>
+            <li>Updates scoped to the user's assigned trials and forms</li>
+            <li>Priority ordering — data queries and protocol changes surface above routine updates</li>
+            <li>Dismissed alerts archived, not deleted — accessible when needed</li>
+          </ul>
+          <div class="cs-figure">
+            <span class="ph">[ IMAGE — RSP login dashboard with personalised alerts and trial update feed ]</span>
+          </div>
         </div>
 
         <div class="decision">
-          <div class="decision__tension">Tension · Linear forms vs. real, interrupted work</div>
-          <h3>Bookmarks to hold a place in long workflows</h3>
-          <p>Long data-entry tasks get interrupted — that's reality, not an edge case. Rather than pretend the work is uninterrupted, I added bookmarks so operators can hold and return to an exact position without losing context or re-deriving where they were. Designing for interruption is what keeps accuracy intact across a real workday.</p>
+          <div class="decision__tension">Decision 02 · Bookmarks</div>
+          <h3>Bookmark your most-used forms for instant access</h3>
+          <p>Power users were navigating the same set of forms every day from a flat, unsorted list. <span class="ruled">Ruled out: auto-surfacing based purely on recency (recent ≠ frequent for clinical workflows).</span> I introduced a bookmark system — users pin the forms they return to most, and RSP surfaces them as a dedicated "Frequently used" section on the dashboard. The order is editable. New users see a guided prompt to set up their list; experienced users skip straight to work.</p>
+          <ul>
+            <li>Bookmark any form with a single click from the form list</li>
+            <li>"Frequently used" section appears at the top of the dashboard</li>
+            <li>Drag-to-reorder for personal priority sequencing</li>
+            <li>Bookmarks persist and sync across sessions</li>
+          </ul>
+          <div class="cs-figure">
+            <span class="ph">[ IMAGE — RSP dashboard with bookmarked forms section and drag-to-reorder ]</span>
+          </div>
         </div>
 
         <div class="decision">
-          <div class="decision__tension">Tension · Static documentation vs. answers in context</div>
-          <h3>A dynamic help section + guidance to the next step</h3>
-          <p>Sending people to a separate manual breaks flow exactly when they're least able to afford it. <span class="ruled">Ruled out: static, off-to-the-side help.</span> I built help that responds to where the user is, paired with clear "next step" guidance, so the answer and the path forward arrive in context instead of requiring a detour.</p>
+          <div class="decision__tension">Decision 03 · Contextual Help</div>
+          <h3>Dynamic, field-aware help — right where the user needs it</h3>
+          <p>Users maintained their own offline notes to understand what fields meant and what data was acceptable. The existing static documentation was not linked to any specific form or field context. <span class="ruled">Ruled out: a general help panel docked to the side (doesn't solve the field-level ambiguity problem).</span> I built field-aware help triggered by a contextual icon on each field — the help content adapts to the specific field, explains the required data format, common mistakes to avoid, and includes the relevant regulatory reference where applicable.</p>
+          <ul>
+            <li>Help icon on every field — no separate page or manual required</li>
+            <li>Content is field-specific, not generic</li>
+            <li>Covers: what to enter, accepted formats, common errors, and regulatory context</li>
+            <li>Expandable inline — doesn't break the form flow</li>
+          </ul>
+          <div class="cs-figure">
+            <span class="ph">[ IMAGE — RSP form field with expanded contextual help layer ]</span>
+          </div>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Decision 04 · Guided Progression</div>
+          <h3>After one form, you're guided to the next</h3>
+          <p>Form completion had no momentum. After submitting, users returned to a flat list with no indication of what to do next. In a clinical trial workflow, forms are sequenced — completing one typically creates the context for the next. <span class="ruled">Ruled out: a rigid wizard that forces linear progression (trials are non-linear; guidance needs to be suggestive, not mandatory).</span> I added a "What's next" prompt on the completion screen — surfacing the logically connected form or action based on the workflow pattern. Users can follow the suggestion or navigate freely.</p>
+          <ul>
+            <li>Guided "next step" appears on every form completion screen</li>
+            <li>Suggestion is workflow-aware — based on trial stage and what's already done</li>
+            <li>Always optional — users can dismiss and navigate anywhere else</li>
+            <li>Eliminates the "now what?" drop-off moment after submission</li>
+          </ul>
+          <div class="cs-figure">
+            <span class="ph">[ IMAGE — RSP form completion screen with guided next-step prompt ]</span>
+          </div>
         </div>
       </section>
 
-      <section class="cs-section reveal" id="design-work">
-        <h2>Design work</h2>
-        <p>The continuity system in practice: alerts, bookmarks, contextual help, and guided progression through the workflow.</p>
-        <div class="cs-figure"><span class="ph">[ IMAGE — updates &amp; alerts surface ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — bookmarking a position in a long form ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — dynamic, contextual help section ]</span></div>
-        <div class="cs-figure"><span class="ph">[ IMAGE — guided next-step in the data-entry flow ]</span></div>
+      <section class="cs-section reveal" id="walkthrough">
+        <h2>End-to-end walkthrough</h2>
+        <p>The four decisions work as a system. A clinical operations user's day in RSP now flows like this:</p>
+        <div class="ia-compare">
+          <div class="ia-before">
+            <span class="ia-compare__label">Step 01</span>
+            <b>Log in — see what needs attention</b>
+            <p>Personalised alerts and trial updates surface immediately on login. Priority items are flagged. The user knows what changed before opening a single form.</p>
+            <div class="cs-figure" style="margin-top:.8rem">
+              <span class="ph">[ IMAGE — Login screen with alert feed ]</span>
+            </div>
+          </div>
+          <div class="ia-after">
+            <span class="ia-compare__label ia-compare__label--after">Step 02</span>
+            <b>Open most-used form — no navigation overhead</b>
+            <p>Bookmarked forms appear on the dashboard. Power users jump directly to their workflow without hunting through a flat list.</p>
+            <div class="cs-figure" style="margin-top:.8rem">
+              <span class="ph">[ IMAGE — Dashboard with bookmarked forms ]</span>
+            </div>
+          </div>
+        </div>
+        <div class="ia-compare" style="margin-top:var(--s3)">
+          <div class="ia-before">
+            <span class="ia-compare__label">Step 03</span>
+            <b>Fill with confidence — help is one click away</b>
+            <p>Contextual help icons on every field answer questions without breaking flow. No offline notes needed. No calls to support for field definitions.</p>
+            <div class="cs-figure" style="margin-top:.8rem">
+              <span class="ph">[ IMAGE — Form with field-level contextual help expanded ]</span>
+            </div>
+          </div>
+          <div class="ia-after">
+            <span class="ia-compare__label ia-compare__label--after">Step 04</span>
+            <b>Complete — guided straight to what's next</b>
+            <p>Submission shows a clear success state and a contextual next-step suggestion. The workflow has momentum. No re-orientation required to continue.</p>
+            <div class="cs-figure" style="margin-top:.8rem">
+              <span class="ph">[ IMAGE — Completion screen with next-step guidance ]</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section reveal" id="principles">
+        <h2>Principles that shaped every decision</h2>
+        <p>Working in a regulated clinical environment surfaces constraints that don't exist in consumer design — accuracy is non-negotiable, traceability is required, and the cost of a wrong design decision is measured in delayed trials, not dropped sessions.</p>
+        <div class="cs-methods">
+          <div class="cs-method">
+            <span class="cs-method__num">01</span>
+            <div>
+              <b>Believe before you see</b>
+              <p>Surface what the user needs before they know they need it. Proactive information — alerts, updates, suggested next steps — reduces the cognitive cost of staying oriented across complex, ongoing trials.</p>
+            </div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">02</span>
+            <div>
+              <b>Smarter user launches</b>
+              <p>The moment of login sets the tone for the session. A dashboard that immediately shows what's urgent, what's bookmarked, and what's changed turns a cold start into a warm handoff from the previous session.</p>
+            </div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">03</span>
+            <div>
+              <b>Prioritise on predictability</b>
+              <p>Clinical users build muscle memory. Consistent patterns, stable layouts, and reliable interactions reduce the mental overhead of using the system — freeing attention for the trial work itself.</p>
+            </div>
+          </div>
+          <div class="cs-method">
+            <span class="cs-method__num">04</span>
+            <div>
+              <b>Commitment by design</b>
+              <p>In a regulated environment, every design decision needs to be defensible — not just to users, but to compliance and clinical stakeholders. Documenting rationale behind decisions turned out to be as important as the decisions themselves.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section reveal" id="impact">
+        <h2>Measurable impact on operations</h2>
+        <p>The four shipped features — alerts, bookmarks, contextual help, and guided next step — produced measurable improvements across the metrics that matter most in clinical operations: accuracy, efficiency, and reduction of unnecessary overhead.</p>
+        <div class="metric-row">
+          <div class="metric"><div class="num"><em>↓ 95%</em></div><span class="lbl">Reduction in form duplication issues</span></div>
+          <div class="metric"><div class="num"><em>↑ 2×</em></div><span class="lbl">Forms accessed via frequently used bookmarks</span></div>
+          <div class="metric"><div class="num"><em>↓ 40%</em></div><span class="lbl">Drop in support tickets for form discovery</span></div>
+          <div class="metric"><div class="num"><em>↑ 2×</em></div><span class="lbl">Gain in form workflow completion rate</span></div>
+        </div>
+        <p>The bookmark system eliminated daily navigation overhead for power users. The contextual help layer directly reduced support ticket volume for form-filling questions. Alert visibility on login meant users caught time-sensitive protocol changes before starting forms — reducing the rework that happened when those changes were only discovered mid-task.</p>
+        <p class="pull">What looked like a navigation problem was actually a continuity problem. Once users could stay oriented across sessions, the quality metrics followed.</p>
       </section>
 
       <section class="cs-section reveal" id="reflection">
-        <h2>Reflection</h2>
-        <p>What worked: reframing from "improve the form" to "protect continuity" gave the project a sharper target and led to features that measurably helped operations rather than just tidying the UI.</p>
-        <p><b>What didn't work / what I'd change:</b> the portal carried real legacy debt — maintenance was a nightmare and the experience had grown inconsistent over years of additions. Working solo inside that, I sometimes patched the surface where the system needed structural cleanup. Next time I'd push earlier for a small consistency pass on the underlying patterns, even at the cost of slower visible progress, because inconsistency in a regulated tool is a slow, compounding risk.</p>
+        <h2>What enterprise healthcare UX taught me</h2>
+
+        <div class="decision">
+          <div class="decision__tension">Learning 01</div>
+          <h3>Complexity shapes design vocabulary</h3>
+          <p>Clinical trial systems have a domain language that users are fluent in and designers are not. Early on I tried to simplify terminology in ways that made sense to a UX audience but confused clinical operations staff. The lesson: in expert-domain products, your job is to reduce interface complexity, not domain complexity. Use their words.</p>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Learning 02</div>
+          <h3>Power users define the roadmap</h3>
+          <p>The users doing the highest volume of work exposed the deepest problems. Casual users had adapted around the system's limitations; power users hadn't — their workarounds (offline spreadsheets, copy-pasted notes, browser bookmarks) were a direct map of every gap in the product. In enterprise systems, start research with power users, not average users.</p>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Learning 03</div>
+          <h3>Prioritise decision fatigue</h3>
+          <p>Clinical ops staff make hundreds of small, consequential decisions every session. Every unnecessary choice the system forces on them — what to open next, where the help lives, what this field means — is cognitive tax on people who can't afford it. The most impactful thing design can do in this context is remove decisions, not redesign them.</p>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Learning 04</div>
+          <h3>Personalisation as predictability</h3>
+          <p>In consumer products, personalisation means surprises. In clinical systems, users want the opposite: they want the system to remember their preferences and be stable. Bookmarks and saved configurations aren't personalisation features in the consumer sense — they're a form of predictability that reduces the cost of starting each session.</p>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Learning 05</div>
+          <h3>Front-load clarity</h3>
+          <p>The most expensive moment to discover an ambiguity is mid-task. Help layers, format guidance, and field definitions that live at the point of entry eliminate a whole class of errors that would otherwise require audit and rework. In a regulated product, clarity at input is a quality feature, not a nice-to-have.</p>
+        </div>
+
+        <div class="decision">
+          <div class="decision__tension">Learning 06</div>
+          <h3>Commitment by design</h3>
+          <p>Working inside a regulated environment means every design decision needs to be defensible — not just to users, but to compliance and clinical stakeholders. Documenting the rationale behind decisions (especially the ones that feel counterintuitive to non-clinical reviewers) was as important as the decisions themselves. In healthcare UX, commitment by design isn't optional.</p>
+        </div>
+
         <div class="kv">
-          <div class="kv__row"><dt>Methods</dt><dd>Contextual inquiry · usability testing · affinity mapping</dd></div>
-          <div class="kv__row"><dt>Shipped</dt><dd>Updates &amp; alerts, bookmarks, dynamic help, guided next-step for RSP data entry</dd></div>
-          <div class="kv__row"><dt>Timeline</dt><dd>6 months, 2026</dd></div>
+          <div class="kv__row"><dt>Methods</dt><dd>Contextual inquiry · usability testing · stakeholder interviews · affinity mapping</dd></div>
+          <div class="kv__row"><dt>Shipped</dt><dd>Personalised alerts &amp; updates · bookmarks for frequent forms · dynamic field-aware help · guided next-step on completion</dd></div>
+          <div class="kv__row"><dt>Platform</dt><dd>Desktop / Web · enterprise clinical operations</dd></div>
         </div>
       </section>
 
@@ -157,7 +321,7 @@
   </div>
 </main>
 
-<footer class="footer">
+<footer class="footer" id="contact">
   <div class="wrap">
     <div class="footer__top">
       <p class="footer__cta">Have a complex product that needs sorting out? <a href="mailto:karpagameenalm@gmail.com">Let's talk →</a></p>

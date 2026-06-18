@@ -115,7 +115,7 @@
           </div>
         </div>
         <p>My job: design one profile system that works for all of them. Easy, right?</p>
-        <div class="cs-figure reveal"><span class="ph">[ IMAGE — seven user types diagram with role hierarchy ]</span></div>
+        <div class="cs-figure reveal"><img src="./SBI Images/target audience.png" alt="Seven user types diagram with role hierarchy"></div>
 
         <div class="decision" style="margin-top:var(--s4)">
           <div class="decision__tension">Constraint · No access to real data</div>
@@ -167,7 +167,7 @@
           </div>
         </div>
 
-        <div class="cs-figure reveal"><span class="ph">[ IMAGE — affinity map in FigJam, pain points grouped by theme ]</span></div>
+        <div class="cs-figure reveal"><img src="./SBI Images/Affinity mapping.png" alt="Affinity map in FigJam, pain points grouped by theme"></div>
       </section>
 
       <!-- THE AHA MOMENT -->
@@ -196,14 +196,14 @@
       <section class="cs-section reveal" id="ia">
         <h2>Sketching the information architecture</h2>
         <p>Based on user needs and the existing four-tab structure, I restructured the information architecture into a clearer, more logical hierarchy — one that reflected how users actually think about their profile, not how the system was built.</p>
-        <div class="cs-figure cs-figure--tall reveal"><span class="ph">[ IMAGE — restructured IA diagram with four main categories: Profile, Security, Payment, Settings ]</span></div>
+        <div class="cs-figure cs-figure--tall reveal"><img src="./SBI Images/approach.png" alt="Restructured IA diagram with four main categories: Profile, Security, Payment, Settings"></div>
       </section>
 
       <!-- WIREFRAMES -->
       <section class="cs-section reveal" id="wireframes">
         <h2>From chaos to clarity — wireframing</h2>
         <p>I started with lo-fi sketches and went through multiple rounds of internal review with the team. I tested different layouts and components through A/B testing, and ran guerrilla testing to see which approaches felt more intuitive before committing to high-fidelity work.</p>
-        <div class="cs-figure reveal"><span class="ph">[ IMAGE — lo-fi wireframe sketches showing early layout explorations ]</span></div>
+        <div class="cs-figure reveal"><img src="./SBI Images/testing 1.png" alt="Lo-fi wireframe sketches showing early layout explorations"></div>
       </section>
 
       <!-- DESIGN DECISIONS -->
@@ -216,7 +216,7 @@
           <p><b>Option 1 — Left navigation:</b> A sidebar organising information into distinct categories — Profile, Security, Payment, Settings — grouping related information together and providing clear mental models for where to find specific features.</p>
           <p><b>Option 2 — Single-page layout:</b> All information accessible through one continuous scroll, with Primary Contact &amp; Authority, Business Information, and User Hierarchy &amp; Management visible at once.</p>
           <p><b>We went with Option 1.</b> This structure scales better as features are added and reduces cognitive load — users focus on one category at a time instead of processing everything in a single overwhelming scroll.</p>
-          <div class="cs-figure reveal"><span class="ph">[ IMAGE — left navigation option vs. single-page scroll comparison ]</span></div>
+          <div class="cs-figure reveal"><img src="./SBI Images/testing 2.png" alt="Left navigation option vs. single-page scroll comparison"></div>
         </div>
 
         <div class="decision">
@@ -225,7 +225,7 @@
           <p><b>Option 1 — Collapsible list:</b> A text-based tree showing the Regulator at the top, with expandable sections for Administrators and Transaction Users. Each card shows name, designation, department, employee ID, contact, and permissions.</p>
           <p><b>Option 2 — Flowchart visualisation:</b> A diagram showing hierarchical relationships with connecting lines branching from high authority down through Administrators to Transaction Users.</p>
           <p><b>We went with Option 2 — but with an expandable view.</b> At a glance, users can see who reports to whom, how many people sit under each admin, and where they fit in the organisation. The expandable detail layer adds depth without cluttering the overview.</p>
-          <div class="cs-figure reveal"><span class="ph">[ IMAGE — org chart flowchart visualisation with expandable detail ]</span></div>
+          <div class="cs-figure reveal"><img src="./SBI Images/user Role RBAC.png" alt="Org chart flowchart visualisation with expandable detail"></div>
         </div>
 
         <div class="decision">
@@ -244,35 +244,35 @@
           <div class="decision__tension">Screen 01 · Identity &amp; organisational visibility</div>
           <h3>Visibility of required information</h3>
           <p>This section addresses the core identity and organisational visibility needs. Users can now see comprehensive personal details, access company information, and understand their team structure — all in one place.</p>
-          <div class="cs-figure reveal"><span class="ph">[ IMAGE — profile screen showing personal details, company info, and team structure ]</span></div>
+          <div class="cs-figure reveal"><img src="./SBI Images/V1.png" alt="Profile screen showing personal details, company info, and team structure"></div>
         </div>
 
         <div class="decision">
           <div class="decision__tension">Screen 02 · Team hierarchy</div>
           <h3>Understanding team structure at a glance</h3>
           <p>A visual org chart shows the complete hierarchy from high authority down through three administrators to transaction users. Role badges provide instant recognition, and summary metrics at the top give a quick team snapshot without requiring deep navigation.</p>
-          <div class="cs-figure reveal"><span class="ph">[ IMAGE — org chart with role badges, from Regulator → Admins → Transaction Users, summary metrics above ]</span></div>
+          <div class="cs-figure reveal"><img src="./SBI Images/V2.png" alt="Org chart with role badges, from Regulator → Admins → Transaction Users, summary metrics above"></div>
         </div>
 
         <div class="decision">
           <div class="decision__tension">Screen 03 · Security &amp; payment settings</div>
           <h3>Consolidated security access</h3>
           <p>Instead of being scattered across different areas, all payment settings are now consolidated in one place — making it easy for users to enable, disable, or manage payment services as needed. Security controls (password, 2FA, IP restrictions) live here too, organised as a coherent set of controls rather than a list of disconnected options.</p>
-          <div class="cs-figure reveal"><span class="ph">[ IMAGE — consolidated security and payment settings screen ]</span></div>
+          <div class="cs-figure reveal"><img src="./SBI Images/V3.png" alt="Consolidated security and payment settings screen"></div>
         </div>
 
         <div class="decision">
           <div class="decision__tension">Screen 04 · Permissions &amp; authorisation</div>
           <h3>Visibility into permissions &amp; authorisation limits</h3>
           <p>Quick transfers goes deeper by showing authorisation management — users can see exactly who can authorise transfers, with their details and limits displayed clearly. This visibility helps users understand not just their own permissions, but how authorisation works across their entire team.</p>
-          <div class="cs-figure reveal"><span class="ph">[ IMAGE — authorisation management view with transfer limits, authoriser details ]</span></div>
+          <div class="cs-figure reveal"><img src="./SBI Images/V4.png" alt="Authorisation management view with transfer limits, authoriser details"></div>
         </div>
 
         <div class="decision">
           <div class="decision__tension">Screen 05 · Notifications</div>
           <h3>Account-level notification control</h3>
           <p>Users can now control SMS notifications for each account individually with simple toggles. Bulk "Disable all" and "Enable all" actions handle multiple accounts quickly, while search and pagination manage large account lists. An Important Notes sidebar clarifies OTP requirements and prevents confusion about duplicate messages.</p>
-          <div class="cs-figure reveal"><span class="ph">[ IMAGE — notification control screen with per-account toggles, bulk actions, important notes sidebar ]</span></div>
+          <div class="cs-figure reveal"><img src="./SBI Images/V5.png" alt="Notification control screen with per-account toggles, bulk actions, important notes sidebar"></div>
         </div>
       </section>
 

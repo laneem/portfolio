@@ -29,9 +29,8 @@
     if (t) toggleTheme();
   });
 
-  /* ---------- 2. CLICK-CRACK signature --------------------------- */
-  /* Thin fracture lines radiate from the cursor and dissolve.        */
-  var canvas, ctx, dpr, fractures = [], rafId = null;
+  /* ---------- 2. CUSTOM CURSOR + CLICK BURST --------------------- */
+  var canvas, ctx, dpr, particles = [], rafId = null;
 
   function initCanvas() {
     if (reduceMotion) return;
@@ -45,36 +44,80 @@
   function resize() {
     if (!canvas) return;
     dpr = window.devicePixelRatio || 1;
-    canvas.width = window.innerWidth * dpr;
+    canvas.width  = window.innerWidth  * dpr;
     canvas.height = window.innerHeight * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
   function accentColor() {
     var c = getComputedStyle(root).getPropertyValue("--accent").trim();
-    return c || "#bd5d3e";
+    return c || "#4f6ef7";
+  }
+  function inkColor() {
+    var c = getComputedStyle(root).getPropertyValue("--ink").trim();
+    return c || "#1c1a16";
   }
 
-  function spawnCrack(x, y) {
+  /* ---- custom cursor ring (fine pointer / desktop only) -------- */
+  var mx = -200, my = -200, rx = -200, ry = -200;
+
+  function initCursor() {
+    if (reduceMotion || !window.matchMedia("(pointer: fine)").matches) return;
+
+    var ring = document.createElement("div");
+    ring.className = "cursor-ring";
+    document.body.appendChild(ring);
+
+    document.addEventListener("mousemove", function (e) {
+      mx = e.clientX; my = e.clientY;
+    });
+    document.addEventListener("mouseenter", function () {
+      ring.classList.add("is-visible");
+    });
+    document.addEventListener("mouseleave", function () {
+      ring.classList.remove("is-visible");
+    });
+    document.addEventListener("mouseover", function (e) {
+      var over = !!e.target.closest("a,button,[role='button'],.case-card");
+      ring.classList.toggle("cursor--hovering", over);
+    });
+    document.addEventListener("mousedown", function () {
+      ring.classList.add("cursor--clicking");
+    });
+    document.addEventListener("mouseup", function () {
+      ring.classList.remove("cursor--clicking");
+    });
+
+    (function lerpRing() {
+      rx += (mx - rx) * 0.11;
+      ry += (my - ry) * 0.11;
+      ring.style.left = rx + "px";
+      ring.style.top  = ry + "px";
+      requestAnimationFrame(lerpRing);
+    }());
+  }
+
+  /* ---- click burst --------------------------------------------- */
+  function spawnBurst(x, y) {
     if (!ctx) return;
-    var spokes = 5 + Math.floor(Math.random() * 4);
-    var color = accentColor();
-    var base = Math.random() * Math.PI * 2;
-    for (var i = 0; i < spokes; i++) {
-      var angle = base + (i / spokes) * Math.PI * 2 + (Math.random() - 0.5) * 0.5;
-      var len = 26 + Math.random() * 42;
-      // build a slightly jagged segmented line
-      var pts = [{ x: x, y: y }];
-      var steps = 3 + Math.floor(Math.random() * 2);
-      var px = x, py = y;
-      for (var s = 0; s < steps; s++) {
-        var seg = len / steps;
-        var jitter = (Math.random() - 0.5) * 10;
-        px += Math.cos(angle) * seg + Math.cos(angle + 1.57) * jitter;
-        py += Math.sin(angle) * seg + Math.sin(angle + 1.57) * jitter;
-        pts.push({ x: px, y: py });
-      }
-      fractures.push({ pts: pts, life: 1, color: color, w: 0.6 + Math.random() * 1.1 });
+    var ink    = inkColor();
+    var accent = accentColor();
+
+    /* expanding ring — ink colored, always readable on any bg */
+    particles.push({ type: "ring", x: x, y: y, r: 3, life: 1, color: ink });
+
+    /* radiating dots — accent colored, add a pop of brand color */
+    var n = 10;
+    for (var i = 0; i < n; i++) {
+      var angle = (i / n) * Math.PI * 2 + (Math.random() - 0.5) * 0.4;
+      var spd   = 1.8 + Math.random() * 2.8;
+      particles.push({
+        type: "dot", x: x, y: y,
+        vx: Math.cos(angle) * spd,
+        vy: Math.sin(angle) * spd,
+        r: 1.8 + Math.random() * 1.8,
+        life: 1, color: accent
+      });
     }
     if (!rafId) rafId = requestAnimationFrame(draw);
   }
@@ -82,28 +125,32 @@
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     var alive = false;
-    for (var i = 0; i < fractures.length; i++) {
-      var f = fractures[i];
-      f.life -= 0.035;
-      if (f.life <= 0) continue;
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.life -= p.type === "ring" ? 0.038 : 0.032;
+      if (p.life <= 0) { particles.splice(i, 1); continue; }
       alive = true;
-      ctx.globalAlpha = Math.max(0, f.life) * 0.9;
-      ctx.strokeStyle = f.color;
-      ctx.lineWidth = f.w;
-      ctx.lineCap = "round";
-      ctx.beginPath();
-      ctx.moveTo(f.pts[0].x, f.pts[0].y);
-      var reach = Math.ceil(f.pts.length * (1 - f.life) * 1.6) + 1;
-      for (var p = 1; p < Math.min(f.pts.length, reach); p++) {
-        ctx.lineTo(f.pts[p].x, f.pts[p].y);
+      ctx.globalAlpha = p.life * 0.88;
+      if (p.type === "ring") {
+        p.r += (32 - p.r) * 0.14;
+        ctx.strokeStyle = p.color;
+        ctx.lineWidth   = 1.5;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.stroke();
+      } else {
+        p.x += p.vx; p.y += p.vy;
+        p.vx *= 0.9; p.vy *= 0.9;
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r * p.life, 0, Math.PI * 2);
+        ctx.fill();
       }
-      ctx.stroke();
     }
     ctx.globalAlpha = 1;
     if (alive) {
       rafId = requestAnimationFrame(draw);
     } else {
-      fractures = [];
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       rafId = null;
     }
@@ -111,10 +158,10 @@
 
   if (!reduceMotion) {
     initCanvas();
+    initCursor();
     document.addEventListener("pointerdown", function (e) {
-      // ignore right-click / non-primary
       if (e.button && e.button !== 0) return;
-      spawnCrack(e.clientX, e.clientY);
+      spawnBurst(e.clientX, e.clientY);
     });
   }
 
@@ -148,7 +195,50 @@
     sections.forEach(function (s) { spy.observe(s); });
   }
 
-  /* ---------- 5. FOOTER YEAR ------------------------------------- */
+  /* ---------- 5. SCROLL PROGRESS --------------------------------- */
+  var fillEl = document.getElementById("scroll-fill");
+  if (fillEl) {
+    window.addEventListener("scroll", function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      if (max <= 0) return;
+      fillEl.style.width = ((window.scrollY / max) * 100).toFixed(2) + "%";
+    }, { passive: true });
+  }
+
+  /* ---------- 6. PARALLAX HERO ----------------------------------- */
+  (function () {
+    if (reduceMotion) return;
+    var portrait  = document.querySelector(".hero__portrait");
+    var heroText  = document.querySelector(".hero__text");
+    var hint      = document.querySelector(".scroll-hint");
+    if (!portrait && !heroText) return;
+
+    var ticking = false;
+
+    function applyParallax() {
+      var sy = window.scrollY;
+
+      /* only run while hero is roughly in view */
+      if (sy > window.innerHeight * 1.4) { ticking = false; return; }
+
+      /* desktop only — portrait stacks on mobile, parallax looks off there */
+      if (window.innerWidth > 820) {
+        if (portrait) portrait.style.transform = "translateY(" + (sy * 0.22) + "px)";
+        if (heroText)  heroText.style.transform  = "translateY(" + (sy * 0.07) + "px)";
+      }
+
+      /* scroll hint fades once user starts scrolling */
+      if (hint) hint.classList.toggle("is-hidden", sy > 60);
+
+      ticking = false;
+    }
+
+    window.addEventListener("scroll", function () {
+      if (!ticking) { requestAnimationFrame(applyParallax); ticking = true; }
+    }, { passive: true });
+  }());
+
+  /* ---------- 7. FOOTER YEAR ------------------------------------- */
   var y = document.querySelector("[data-year]");
   if (y) y.textContent = new Date().getFullYear();
 

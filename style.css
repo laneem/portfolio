@@ -100,7 +100,7 @@ img { max-width: 100%; display: block; }
   margin: 0 0 var(--s3);
   display: inline-flex; align-items: center; gap: .6rem;
 }
-.eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--accent); opacity: .6; }
+.eyebrow::before { content: "▶"; font-size: .55em; opacity: .8; }
 .eyebrow span { opacity: .7; }
 
 /* ----- 3. NAV (shared) --------------------------------------------- */
@@ -367,7 +367,7 @@ img { max-width: 100%; display: block; }
 /* mockup cover area */
 .case-card__cover {
   position: relative; overflow: hidden;
-  display: flex; align-items: flex-end; justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   min-height: 300px; flex: 1;
 }
 .case-card__cover::after {
@@ -377,7 +377,7 @@ img { max-width: 100%; display: block; }
 .case-card__cover img {
   position: relative; z-index: 1;
   width: 100%; max-height: 100%;
-  object-fit: contain; object-position: bottom center;
+  object-fit: contain; object-position: center;
   filter: drop-shadow(0 -8px 28px rgba(0,0,0,.4));
   transition: transform .45s var(--ease);
   display: block;
@@ -492,6 +492,17 @@ img { max-width: 100%; display: block; }
 }
 
 /* ----- 10. ABOUT ---------------------------------------------------- */
+.about-intro {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: clamp(5rem, 10vw, 7rem) clamp(3rem, 5vw, 5rem);
+  gap: var(--s5);
+}
+.about-intro .lede { margin: 0; }
+.about-intro .about-grid { margin-top: var(--s2); border-top: 1px solid var(--line); padding-top: var(--s5); }
+
 .lede { font-family: var(--display); font-size: var(--t-h2); line-height: 1.32; font-weight: 400;
   max-width: 24ch; letter-spacing: -.01em; }
 .about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(2rem,5vw,5rem); align-items: start; }
@@ -938,6 +949,7 @@ img { max-width: 100%; display: block; }
 /* ----- 13. RESPONSIVE ---------------------------------------------- */
 @media (max-width: 880px) {
   .about-grid { grid-template-columns: 1fr; }
+  .about-intro { min-height: auto; padding-block: clamp(5rem, 10vw, 7rem) var(--s6); }
   .cs-layout { grid-template-columns: 1fr; }
   .cs-index { position: static; top: auto; margin-bottom: var(--s4);
     border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s4); background: var(--surface); }

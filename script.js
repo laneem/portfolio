@@ -222,36 +222,12 @@
     }, { passive: true });
   }
 
-  /* ---------- 6. PARALLAX HERO ----------------------------------- */
+  /* ---------- 6. SCROLL HINT ------------------------------------ */
   (function () {
-    if (reduceMotion) return;
-    var portrait  = document.querySelector(".hero__portrait");
-    var heroText  = document.querySelector(".hero__text");
-    var hint      = document.querySelector(".scroll-hint");
-    if (!portrait && !heroText) return;
-
-    var ticking = false;
-
-    function applyParallax() {
-      var sy = window.scrollY;
-
-      /* only run while hero is roughly in view */
-      if (sy > window.innerHeight * 1.4) { ticking = false; return; }
-
-      /* desktop only — portrait stacks on mobile, parallax looks off there */
-      if (window.innerWidth > 820) {
-        if (portrait) portrait.style.transform = "translateY(" + (sy * 0.22) + "px)";
-        if (heroText)  heroText.style.transform  = "translateY(" + (sy * 0.07) + "px)";
-      }
-
-      /* scroll hint fades once user starts scrolling */
-      if (hint) hint.classList.toggle("is-hidden", sy > 60);
-
-      ticking = false;
-    }
-
+    var hint = document.querySelector(".scroll-hint");
+    if (!hint) return;
     window.addEventListener("scroll", function () {
-      if (!ticking) { requestAnimationFrame(applyParallax); ticking = true; }
+      hint.classList.toggle("is-hidden", window.scrollY > 60);
     }, { passive: true });
   }());
 

@@ -323,7 +323,7 @@ img { max-width: 100%; display: block; }
 .section__head {
   display: flex; align-items: baseline; justify-content: space-between;
   gap: var(--s4); margin-bottom: var(--s6); flex-wrap: wrap;
-  border-top: 1px solid var(--line); padding-top: var(--s4);
+  padding-top: var(--s4);
 }
 .section__head h2 { font-size: var(--t-h2); }
 .section__head .count { font-family: var(--mono); font-size: var(--t-xs); color: var(--muted); letter-spacing: .15em; }
@@ -830,18 +830,12 @@ img { max-width: 100%; display: block; }
 }
 .scroll-hint.is-hidden { opacity: 0; }
 
-/* parallax will-change hints */
-.hero__portrait { will-change: transform; }
-.hero__text     { will-change: transform; }
 
-/* work section — subtle top shadow so it feels like it lifts over the hero */
+/* work section — same background as rest of page; z-index ensures hero
+   parallax elements never paint over the section content while scrolling */
 #work {
-  position: relative; z-index: 1;
-  box-shadow: 0 -24px 60px -12px rgba(0,0,0,.08);
-  background: var(--paper);
-}
-:root[data-theme="dark"] #work {
-  box-shadow: 0 -24px 60px -12px rgba(0,0,0,.35);
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 820px) {

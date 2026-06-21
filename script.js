@@ -58,42 +58,59 @@
     return c || "#1c1a16";
   }
 
-  /* ---- custom cursor ring (fine pointer / desktop only) -------- */
+  /* ---- custom cursor: arrow + halo ring (fine pointer / desktop only) ---- */
   var mx = -200, my = -200, rx = -200, ry = -200;
 
   function initCursor() {
     if (reduceMotion || !window.matchMedia("(pointer: fine)").matches) return;
 
-    var ring = document.createElement("div");
-    ring.className = "cursor-ring";
-    document.body.appendChild(ring);
+    /* Arrow — SVG pointer that snaps exactly to the mouse hotspot */
+    var arrowWrap = document.createElement("div");
+    arrowWrap.className = "cursor-arrow-wrap";
+    arrowWrap.innerHTML =
+      '<svg class="cursor-pointer" viewBox="0 0 20 24" fill="none" aria-hidden="true">' +
+      '<path d="M3 2L3 18L7 14L10 21L12 20L9 13.5L15 13.5Z"/>' +
+      '</svg>';
+    document.body.appendChild(arrowWrap);
+
+    /* Halo ring — positioned with lerp for a soft trailing-depth effect */
+    var halo = document.createElement("div");
+    halo.className = "cursor-halo";
+    document.body.appendChild(halo);
 
     document.addEventListener("mousemove", function (e) {
       mx = e.clientX; my = e.clientY;
+      /* offset by (3, 2) so the SVG tip aligns with the actual mouse hotspot */
+      arrowWrap.style.transform = "translate(" + (mx - 3) + "px," + (my - 2) + "px)";
     });
     document.addEventListener("mouseenter", function () {
-      ring.classList.add("is-visible");
+      arrowWrap.classList.add("is-visible");
+      halo.classList.add("is-visible");
     });
     document.addEventListener("mouseleave", function () {
-      ring.classList.remove("is-visible");
+      arrowWrap.classList.remove("is-visible");
+      halo.classList.remove("is-visible");
     });
     document.addEventListener("mouseover", function (e) {
       var over = !!e.target.closest("a,button,[role='button'],.case-card");
-      ring.classList.toggle("cursor--hovering", over);
+      arrowWrap.classList.toggle("cursor--hovering", over);
+      halo.classList.toggle("cursor--hovering", over);
     });
     document.addEventListener("mousedown", function () {
-      ring.classList.add("cursor--clicking");
+      arrowWrap.classList.add("cursor--clicking");
+      halo.classList.add("cursor--clicking");
     });
     document.addEventListener("mouseup", function () {
-      ring.classList.remove("cursor--clicking");
+      arrowWrap.classList.remove("cursor--clicking");
+      halo.classList.remove("cursor--clicking");
     });
 
-    (function lerpRing() {
+    (function lerpHalo() {
       rx += (mx - rx) * 0.11;
       ry += (my - ry) * 0.11;
-      ring.style.left = rx + "px";
-      ring.style.top  = ry + "px";
-      requestAnimationFrame(lerpRing);
+      halo.style.left = rx + "px";
+      halo.style.top  = ry + "px";
+      requestAnimationFrame(lerpHalo);
     }());
   }
 

@@ -570,6 +570,7 @@ img { max-width: 100%; display: block; }
 
 /* personality card */
 .collage__card {
+  font-family: "Gochi Hand", sans-serif;
   position: absolute;
   bottom: 20%; left: 29%;
   background: var(--accent);
@@ -577,7 +578,6 @@ img { max-width: 100%; display: block; }
   padding: var(--s3) var(--s4);
   border-radius: 10px;
   font-size: 0.8rem;
-  font-family: var(--body);
   font-weight: 500;
   line-height: 2;
   z-index: 5;
@@ -592,7 +592,7 @@ img { max-width: 100%; display: block; }
   font-size: 1.2rem;
   line-height: 1;
 }
-.collage__card p { margin: 0; color: #fff; }
+.collage__card p { margin: 0; color: #fff; font-size: 1rem; }
 
 /* floating emojis */
 .collage__emoji {
